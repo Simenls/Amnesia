@@ -8,6 +8,7 @@ void OnStart()
   AddEntityCollideCallback("Player", "NoDust", "DustRemove", true, 1);
   AddEntityCollideCallback("Player", "Skummelt", "FadeOut", true, 1);
   AddEntityCollideCallback("Player", "lurkerspawn", "Plask", true, 1);
+  AddEntityCollideCallback("Player", "PushDoor", "Knirk", true, 1);
   AddUseItemCallback("", "crowbar_1", "castle_5", "UsedCrowbarOnDoor", true);
 AddEntityCollideCallback("crowbar_joint_1", "ScriptArea_1", "CollideAreaBreakDoor", true, 1);
 }
@@ -119,7 +120,80 @@ void TimerSwitchShovel(string &in asTimer)
  SetEntityActive("crowbar_joint_1", true);
  }
 
+ void Knirk(string &in asParent, string &in asChild, int alState)
+ {
+ 	SetSwingDoorClosed("door_gallery", false, false);
+ 	SetSwingDoorDisableAutoClose("door_gallery", true);
 
+ 	PlaySoundAtEntity("creaking_door", "joint_door_move_special.snt", "door_gallery", 1.0 / 0.7f, false);
+
+ 	AddTimer("door_gallery", 0.01f, "TimerSwingDoor");
+
+ 	AddDebugMessage("Boho, the gallery door creaks open.", false);
+
+ 	AddTimer("stopcreak", 2.0f, "TimerStopCreak");
+ }
+ void TimerSwingDoor(string &in asTimer)
+ {
+ 	if(GetLocalVarInt("SwingDoor") == 10){
+ 		SetLocalVarInt("SwingDoor", 0);
+ 		return;
+ 	}
+
+ 	if(asTimer == "door_gallery") AddPropForce(asTimer, -70.0f, 0, 0, "World");
+ 	else AddPropForce(asTimer, -95.0f, 0, 0, "World");
+
+ 	AddLocalVarInt("SwingDoor", 1);
+
+ 	AddTimer(asTimer, 0.03f, "TimerSwingDoor");
+
+ 	AddDebugMessage("Swing: "+GetLocalVarInt("SwingDoor"), false);
+ }
+ void TimerStopCreak(string &in asTimer)
+ {
+ 	if(asTimer == "scare2"){
+ 		PlaySoundAtEntity("scare", "react_scare.snt", "Player", 1.0 / 1, false);
+ 		return;
+ 	}
+ 	if(asTimer == "scare"){
+ 		PlaySoundAtEntity("scare", "react_scare.snt", "Player", 0, false);
+ 		//PlaySoundAtEntity("laugh", "00_laugh.snt", "door_gallery", 1.0 / 1, false);
+ 		PlaySoundAtEntity("loop", "00_loop.snt", "Player", 1.0 / 0.1f, false);
+ 		return;
+ 	}
+ 	if(asTimer == "breath1"){
+ 		PlaySoundAtEntity("breath", "react_breath.snt", "Player", 1.0 / 1, false);
+ 		return;
+ 	}
+ 	if(asTimer == "breath2"){
+ 		PlaySoundAtEntity("breath", "react_breath.snt", "Player", 1.0 / 0.9f, false);
+ 		return;
+ 	}
+ 	if(asTimer == "breath3"){
+ 		//SetSwingDoorLocked("door_gallery", false, true);
+ 		PlaySoundAtEntity("breath", "react_breath.snt", "Player", 1.0 / 0.8f, false);
+ 		AddTimer("lookloop", RandFloat(2.0f,3.0f), "TimerRandomLook");	//Re-activate the spinning head
+ 		FadePlayerFOVMulTo(1.0f, 0.1f);
+ 		StopSound("loop", 1);
+ 		StartScreenShake(0.01f,0.25f, 0.01f,0.5f);
+ 		return;
+ 	}
+ 	if(asTimer == "lightsout"){
+ 		SetLampLit("chandelier_nice_1", false, true);
+ 		SetLampLit("candlestick_floor_2", false, true);
+ 		FadeLightTo("PointLight_25", 0, 0, 0, 0, 0, 1);
+ 		FadePlayerFOVMulTo(1.5f, 0.25f);
+ 		return;
+ 	}
+
+ 	if(asTimer == "sanity"){
+ 		//SetSwingDoorLocked("door_gallery", true, false);
+ 		GiveSanityDamage(10, true);
+ 		return;
+ 	}
+
+ 	StopSound("creaking_door", 0.4f);
+ }
 void CollideAreaBreakDoor(string &in asParent, string &in asChild, int alState)
  {
  AddPlayerSanity(25);
