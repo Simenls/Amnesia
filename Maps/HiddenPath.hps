@@ -1,0 +1,267 @@
+void Stille(string &in asEntity)
+{
+ StopMusic(0, 10);
+}
+////////////////////////
+//BEGIN COMPLETE TRAIL//
+void CollideCompleteTrail(string &in asParent, string &in asChild, int alState)
+{
+	for(int i=1;i<=3;i++) SetPropActiveAndFade("cockroache_"+i, true, 0.5f);
+
+	CompleteQuest("00Trail", "00Trail");
+
+	PlayMusic("15_puzzle_hole.ogg", false, 1.0f, 0.5f, 5, false);
+
+	RemoveTimer("lookloop2");
+
+	StartPlayerLookAt("note_generic_1", 2.0f, 2.0f, "");
+
+	AddTimer("stoplook", 3.0f, "TimerStopLook");
+}
+void TimerStopLook(string &in asTimer)
+{
+	StopPlayerLookAt();
+}
+//END COMPLETE TRAIL//
+//////////////////////
+
+
+///////////////////////
+//BEGIN EFFECT TIMERS//
+void TimerWallScrape(string &in asTimer)
+{
+	int iArea = RandFloat(1,6);
+
+	PlaySoundAtEntity("wall_scrape"+iArea, "scare_wall_crawl_single.snt", "AreaWallScrape_"+iArea, 0.0f, false);
+
+	AddTimer("wall_scrape", RandFloat(3.0f,15.0f), "TimerWallScrape");
+}
+//END EFFECT TIMERS//
+/////////////////////
+
+
+///////////////////
+//BEGIN LAST WIND//
+void CollideLastWind(string &in asParent, string &in asChild, int alState)
+{
+	//if(GetLocalVarInt("VarPicked") != 2) return;
+
+	CreateParticleSystemAtEntity("PSLastWind", "ps_dust_push.ps", "AreaWindLast", false);
+	CreateParticleSystemAtEntity("PSLastWind2", "ps_dust_paper_blow.ps", "AreaWindLast", false);
+	PlaySoundAtEntity("LastWindSound", "general_wind_whirl.snt", "AreaWindLast", 3.0f, false);
+}
+//END LAST WIND//
+/////////////////
+
+
+//////////////////////////
+//BEGIN OPEN SECRET DOOR//
+void PickNoteToSelf(string &in entity, string &in type)
+{
+	PlayMusic("01_paper_self.ogg", false, 0.7f, 0, 10, false);
+
+	//AddTimer("Hint", 0.5f, "TimerHint");	//On door exit instead
+}
+void TimerHint(string &in asTimer)
+{
+	GiveSanityBoostSmall();
+	GiveHint("sanity", "Hints", "SanityAdd", 0);
+}
+void CreateDust(string &in asConnectionName, string &in asMainEntity, string &in asConnectEntity, int alState)
+{
+	//for(int i=1;i<10;i++) AddPropForce("jara_"+i, 1.0f, 1.0f, 1.0f, "world");
+	//for(int i=1;i<4;i++) AddPropForce("jbok_"+i, 1.0f, 1.0f, 1.0f, "world");
+
+	if(GetLocalVarInt("DoSecretDoorEffects") == 1) return;
+
+	CreateParticleSystemAtEntity("PSDoorDust", "ps_dust_falling_door.ps", "secret_door", false);
+
+	AddTimer("sucess_music", 2, "TimerMusic");
+
+	AddTimer("Hint", 0.5f, "TimerHint");
+
+	StartScreenShake(0.006f, 0.5f, 2.0f,2.0f);
+
+	SetLocalVarInt("DoSecretDoorEffects", 1);
+}
+void TimerMusic(string &in asTimer)
+{
+	PlayMusic("01_puzzle_passage.ogg", false, 0.7f, 0, 10, false);
+}
+//END OPEN SECRET DOOR//
+////////////////////////
+
+
+/////////////////////
+//BEGIN MISC THINGS//
+void CollideHintLean(string &in asParent, string &in asChild, int alState)
+{
+	GiveHint("lean", "Hints", "LeanHint", 0);
+}
+
+void CollideTremble(string &in asParent, string &in asChild, int alState)
+{
+	/*Turn off rain for the level
+	 */
+	StopSound("amb_2", 0.0f); StopSound("amb_3", 0.0f); StopSound("amb_4", 0.0f); StopSound("amb_8", 0.0f);
+	DestroyParticleSystem("ParticleSystem_41"); DestroyParticleSystem("ParticleSystem_40");
+
+	/*All below + Timer is for shake events when entering the second last room
+	 */
+	PlaySoundAtEntity("rumble3", "general_rock_rumble_no3d", "Player", 15.0f, false);
+	PlaySoundAtEntity("breath", "react_breath.snt", "Player", 2.0f, false);
+	MovePlayerHeadPos(0.5f, -0.5f, 0.5f, 0.1f, 0.01f);
+
+	StartScreenShake(0.03f, 1.0f, 4.0f,8.0f);
+
+	for(int i=1;i<6;i++) CreateParticleSystemAtEntity("dust"+i, "ps_dust_falling_door", "AreaTrembleFall_"+i, false);
+
+	AddPropForce("chandelier_simple_short_1", -75.0f, 0, 75.0f, "world");
+	AddPropForce("chandelier_simple_short_4", 75.0f, 0, -75.0f, "world");
+
+	AddTimer("stoprumb", 6.0f, "TimerStopRumble");
+	AddTimer("force1", 1.0f, "TimerStopRumble");
+	AddTimer("force", 2.0f, "TimerStopRumble");
+	AddTimer("force", 3.0f, "TimerStopRumble");
+	AddTimer("force", 4.0f, "TimerStopRumble");
+}
+void TimerStopRumble(string &in asTimer)
+{
+	if(asTimer == "force" or asTimer == "force1"){
+		if(asTimer == "force1") FadeImageTrailTo(1.0f, 6.0f);
+
+		int i = i == 150 ? -150 : 150;
+
+		AddPropForce("chandelier_simple_short_1", i, 0, -i, "world");
+		AddPropForce("chandelier_simple_short_4", -i, 0, i, "world");
+
+		if(i == -150) PlaySoundAtEntity("chain", "general_chain_rattle_single", "chandelier_simple_short_1", 0.5f, false);
+		else PlaySoundAtEntity("chain", "general_chain_rattle_single", "chandelier_simple_short_4", 0.5f, false);
+
+		AddDebugMessage("I is: "+i, false);
+
+		return;
+	}
+	PlaySoundAtEntity("breath2", "react_breath.snt", "Player", 1.0f, false);
+	MovePlayerHeadPos(0, 0, 0, 0.2f, 0.01f);
+	FadeImageTrailTo(0.0f, 12.0f);
+	StopSound("rumble3", 10.0f);
+}
+//END MISC THINGS//
+///////////////////
+
+
+//SEEN THE MAGIC OPENING DOOR
+void CollideAreaCollideSeenDoor(string &in asParent, string &in asChild, int alState)
+{
+	SetLocalVarInt("DoCreakPartOfOpenDoor", 1);
+}
+
+//Locked door message
+void InteractLockedDoor(string &in asEntity)
+{
+	SetMessage("Ch01Level03", "DoorLocked", 0);
+
+	PlayGuiSound("locked_door.snt", 0.8f);
+
+	AddTimer(asEntity, 1.0f, "TimerDoorMessageOnAgain");
+}
+
+void TimerDoorMessageOnAgain(string &in asTimer)
+{
+	SetEntityPlayerInteractCallback(asTimer, "InteractLockedDoor", true);
+}
+
+////////////////////////////
+// Run first time starting map
+void OnStart()
+{
+	SetMapDisplayNameEntry("ArchivesOld");
+
+	//----COLLIDE CALLBACKS----//
+	AddEntityCollideCallback("Player", "AreaTriggerDoor_1", "CollideOpeningDustDoor", true, 1);	//Door that swings open 1st corridor
+	AddEntityCollideCallback("Player", "AreaBeginSwirl", "CollideBeginSwirl", true, 1);			//Swril and horror in room behind swing door
+	AddEntityCollideCallback("Player", "AreaTriggerGhost", "CollideBeginGhost", true, 1);		//The steps and throwing book
+	AddEntityCollideCallback("Player", "AreaTriggerTrail", "CollideCompleteTrail", true, 1);		//Complete the follow trail quest
+	AddEntityCollideCallback("Player", "AreaTriggerLastWind", "CollideLastWind", true, 1);	//A last wind puff at end of hall
+	AddEntityCollideCallback("Player", "AreaHintLean", "CollideHintLean", true, 1);	//Enable a hint to help finding the lever part
+	AddEntityCollideCallback("Player", "AreaCollideTremble", "CollideTremble", true, 1);
+	AddEntityCollideCallback("Player", "AreaCollideSeenDoor", "CollideAreaCollideSeenDoor", true, 1);
+
+	//----ENTITY INIT----//
+	CreateParticleSystemAtEntity("BeginWindPS", "ps_dust_push.ps", "AreaBeginWind", false);
+
+	//----ITEM CALLBACKS----//
+	SetSwingDoorLocked("shelf_secret_door_joint_1", true, false);
+	SetEntityInteractionDisabled("shelf_secret_door_joint_1", true);
+
+
+	//----CONNECT CALLBACKS----//
+	/*Secret hole in wall
+	 */
+		ConnectEntities("door_connection",		//Name of connection
+		"secret_lever", 	//Parent entity (Affects)
+		"secret_door",	//Child entity 	(Affected)
+		false,		//Invert the state sent
+		1, 		//States used (0=both), checked before invertion.
+		"CreateDust");	//callback
+
+		ConnectEntities("shelf_connection",		//Name of connection
+		"secret_lever", 	//Parent entity (Affects)
+		"secret_shelf",	//Child entity 	(Affected)
+		false,		//Invert the state sent
+		1, 		//States used (0=both), checked before invertion.
+		"");	//callback
+
+		//SetMoveObjectAngularOffsetArea("secret_shelf", "rotatearea");
+
+	UnBlockHint("SanityAdd"); UnBlockHint("LanternNoItem"); UnBlockHint("LanternNoOil"); UnBlockHint("LeanHint");
+	UnBlockHint("PushHint"); UnBlockHint("ThrowHint"); UnBlockHint("EntitySlide"); UnBlockHint("EntityLever");
+	UnBlockHint("SanityHit");
+
+	//----QUEST INIT----//
+
+	SetNumberOfQuestsInMap(2);
+
+	//----TIMER INIT----//
+	AddTimer("lookloop", 0.1f, "TimerRandomLook");	//Re-activate the spinning head
+	AddTimer("wall_scrape", 0.1f, "TimerWallScrape");	//Random scrapings in the walls
+	AddTimer("BeginWindTimer", 0.75f, "TimerBeginWind");
+
+	//----DEBUG----//
+	if(ScriptDebugOn())
+	{
+		GiveItemFromFile("lantern", "lantern.ent");
+		//SetPlayerLampOil(0);	//Is normally set in level00
+	}
+}
+
+////////////////////////////
+// Run when entering map
+void OnEnter()
+{
+	//----PRELOADING----//
+	PreloadSound("scare_wind_reverse"); PreloadSound("joint_door_move_special"); PreloadSound("scare_tingeling"); PreloadSound("01_tiny1");
+	PreloadSound("react_breath"); PreloadSound("general_wind_whirl"); PreloadSound("react_scare"); PreloadSound("scare_slam_door");
+	PreloadSound("01_tiny2"); PreloadSound("01_tiny3"); PreloadSound("scare_whine_loop"); PreloadSound("scare_tingeling_rev2");
+	PreloadSound("01_tiny4"); PreloadSound("scare_thump_flash"); PreloadSound("00_loop"); PreloadSound("react_sigh");
+	PreloadSound("00_faint"); PreloadSound("react_breath_no3d"); PreloadSound("scare_scratch"); PreloadSound("01_whirl");
+	PreloadSound("scare_scratch_intense"); PreloadSound("scare_male_terrified"); PreloadSound("scare_wall_stomp"); PreloadSound("scare_ghost");
+	PreloadSound("01_door"); PreloadSound("scare_wall_crawl_single"); PreloadSound("general_rock_rumble_no3d");
+
+	PreloadParticleSystem("ps_dust_paper_blow"); PreloadParticleSystem("ps_dust_push"); PreloadParticleSystem("ps_dust_ghost");
+	PreloadParticleSystem("ps_dust_whirl_large"); PreloadParticleSystem("ps_dust_impact_vert"); PreloadParticleSystem("ps_dust_impact");
+	PreloadParticleSystem("ps_dust_falling_door");
+
+	ClearSavedMaps();
+
+	//----AUDIO----//
+	AutoSave();
+}
+
+////////////////////////////
+// Run when leaving map
+void OnLeave()
+{
+
+}

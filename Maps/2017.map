@@ -1,0 +1,64 @@
+<Level>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="4.34253 180 1.32604" CameraTarget="4.34253 0 1.32604" CameraZoom="0.3" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-3.41228 13.9349 -3.08911" CameraTarget="3.23423 1.90735e-006 -0.394553" CameraZoom="1.16013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+        </ViewportConfig>
+        <Groups>
+            <Group ID="0" Name="None" Visible="true" />
+        </Groups>
+    </EditorSession>
+    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="false" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../../../../">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="4">
+                <File Id="0" Path="static_objects/castlebase/wall/default.dae" />
+                <File Id="1" Path="static_objects/castlebase/wall/door_way.dae" />
+                <File Id="2" Path="static_objects/castlebase/wall/door_frame.dae" />
+                <File Id="3" Path="static_objects/castlebase/wall/window_blue.dae" />
+            </FileIndex_StaticObjects>
+            <FileIndex_Entities NumOfFiles="0" />
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects>
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="1" Name="wall_default_1" Rotation="-3.14159 -8.74228e-008 -3.14159" Scale="1 1 1" Tag="" WorldPos="-0.75 0 5.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="2" Name="wall_default_2" Rotation="0.0378489 1.5708 0.0378489" Scale="1 1 1" Tag="" WorldPos="-2.75 0 3.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="3" Name="wall_default_3" Rotation="-3.10374 1.5708 -3.10374" Scale="1 1 1" Tag="" WorldPos="-2.75 0 -0.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="4" Name="wall_default_4" Rotation="-3.10374 1.5708 -3.10374" Scale="1 1 1" Tag="" WorldPos="-2.75 0 -4.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="6" Name="wall_default_6" Rotation="0 2.14577e-006 0" Scale="1 1 1" Tag="" WorldPos="-0.75 0 -6.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="8" Name="wall_default_8" Rotation="0 2.14577e-006 0" Scale="1 1 1" Tag="" WorldPos="7.25 0 -6.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="9" Name="wall_default_9" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="9.25 0 -4.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="10" Name="wall_default_10" Rotation="3.14159 -8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="7.25 0 5.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="11" Name="wall_default_11" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="9.25 0 3.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="12" Name="wall_door_way_1" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="9.25 0 -0.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="13" Name="wall_door_way_2" Rotation="8.74228e-008 1.5708 8.74228e-008" Scale="1 1 1" Tag="" WorldPos="9.25 0 -0.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="14" Name="wall_door_frame_1" Rotation="8.74228e-008 1.5708 8.74228e-008" Scale="1 1 1" Tag="" WorldPos="9.25 0.25 -0.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="3" Group="0" ID="17" Name="wall_window_blue_1" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="3.25 0 -6.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="23" Name="wall_door_frame_2" Rotation="3.14159 -8.74228e-008 -3.14159" Scale="1 1 1" Tag="" WorldPos="3.25 0.259604 5.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="24" Name="wall_door_way_3" Rotation="3.14159 -8.74228e-008 -3.14159" Scale="1 1 1" Tag="" WorldPos="3.25 0.00960433 5.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="25" Name="wall_door_way_4" Rotation="1.74846e-007 8.74228e-008 3.82137e-015" Scale="1 1 1" Tag="" WorldPos="3.25 0.00960433 5.75" />
+            </StaticObjects>
+            <Primitives>
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 12" Corner2UV="0 0" Corner3UV="12 0" Corner4UV="12 12" EndCorner="12 0 12" Group="0" ID="0" Material="C:/Program Files (x86)/Steam/steamapps/common/Amnesia The Dark Descent/static_objects/castlebase/floor/castlebase_tiledfloor02.mat" Name="Plane" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-2.75 0 -6.25" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 11.75" Corner2UV="0 0" Corner3UV="12 0" Corner4UV="12 11.75" EndCorner="12 0 11.75" Group="0" ID="18" Material="C:/Program Files (x86)/Steam/steamapps/common/Amnesia The Dark Descent/static_objects/cellarbase/floor/cellarbase_wood_floor.mat" Name="Plane" Rotation="0 0 -3.14159" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="9.25 4 -6.25" />
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 4.25" Corner2UV="0 0" Corner3UV="4 0" Corner4UV="4 4.25" EndCorner="4 0 4.25" Group="0" ID="27" Material="C:/Program Files (x86)/Steam/steamapps/common/Amnesia The Dark Descent/static_objects/castlebase/floor/castlebase_tiledfloor02.mat" Name="Plane_1" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="1.25 0 5.75" />
+            </Primitives>
+            <Decals />
+            <Entities />
+            <Misc>
+                <Compound Active="true" Group="0" ID="22" Name="Compound_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="9.25 0.125 -0.25">
+                    <Component ID="14" />
+                    <Component ID="13" />
+                    <Component ID="12" />
+                </Compound>
+                <Compound Active="true" Group="0" ID="26" Name="Compound_2" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="3.25 0.134604 5.75">
+                    <Component ID="23" />
+                    <Component ID="24" />
+                    <Component ID="25" />
+                </Compound>
+            </Misc>
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>

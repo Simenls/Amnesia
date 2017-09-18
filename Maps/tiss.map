@@ -1,0 +1,96 @@
+<Level>
+    <EditorSession>
+        <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+            <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="0 180 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-2.46299 3.39731 -1.25149" CameraTarget="3.84979 0 4.99075" CameraZoom="1.66013" GridHeight="0" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+        </ViewportConfig>
+        <Groups>
+            <Group ID="0" Name="None" Visible="true" />
+        </Groups>
+    </EditorSession>
+    <MapData FogActive="false" FogColor="1 1 1 1" FogCulling="true" FogEnd="20" FogFalloffExp="1" FogStart="0" GlobalDecalMaxTris="300" Name="" SkyBoxActive="false" SkyBoxColor="1 1 1 1" SkyBoxTexture="../../../../../">
+        <MapContents>
+            <FileIndex_StaticObjects NumOfFiles="3">
+                <File Id="0" Path="static_objects/murky_castlebase/wall/default.dae" />
+                <File Id="1" Path="static_objects/murky_castlebase/wall/door_way.dae" />
+                <File Id="2" Path="static_objects/dungeonbase/wall/door_frame.dae" />
+            </FileIndex_StaticObjects>
+            <FileIndex_Entities NumOfFiles="3">
+                <File Id="0" Path="entities/organic/corpse_male/corpse_male.ent" />
+                <File Id="1" Path="entities/organic/corpse_pile/corpse_pile1.ent" />
+                <File Id="2" Path="entities/organic/corpse_pile/corpse_pile2.ent" />
+            </FileIndex_Entities>
+            <FileIndex_Decals NumOfFiles="0" />
+            <StaticObjects>
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="3" Name="wall_default_2" Rotation="3.14159 8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="-3.5 0 6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="4" Name="wall_default_3" Rotation="3.14159 8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="4.5 0 6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="5" Name="wall_default_4" Rotation="3.14159 8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="8.5 0 6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="6" Name="wall_default_5" Rotation="3.14159 8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="-7.5 0 6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="7" Name="wall_default_6" Rotation="-3.10374 -1.5708 3.10374" Scale="1 1 1" Tag="" WorldPos="10.5 0 4.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="8" Name="wall_default_7" Rotation="-3.10374 -1.5708 3.10374" Scale="1 1 1" Tag="" WorldPos="10.5 0 0.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="9" Name="wall_default_8" Rotation="-3.10374 -1.5708 3.10374" Scale="1 1 1" Tag="" WorldPos="10.5 0 -3.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="10" Name="wall_default_9" Rotation="-3.10374 -1.5708 3.10374" Scale="1 1 1" Tag="" WorldPos="10.5 0 -7.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="11" Name="wall_default_10" Rotation="0 -4.52995e-006 0" Scale="1 1 1" Tag="" WorldPos="-7.5 0 -9.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="12" Name="wall_default_11" Rotation="0 -4.52995e-006 0" Scale="1 1 1" Tag="" WorldPos="-3.5 0 -9.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="13" Name="wall_default_12" Rotation="0 -4.52995e-006 0" Scale="1 1 1" Tag="" WorldPos="4.5 0 -9.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="14" Name="wall_default_13" Rotation="0 -4.52995e-006 0" Scale="1 1 1" Tag="" WorldPos="0.5 0 -9.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="15" Name="wall_default_14" Rotation="0 -4.52995e-006 0" Scale="1 1 1" Tag="" WorldPos="8.5 0 -9.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="16" Name="wall_default_15" Rotation="0.000375986 1.5708 0.000376225" Scale="1 1 1" Tag="" WorldPos="-9.5 0 -7.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="17" Name="wall_default_16" Rotation="0.000375986 1.5708 0.000376225" Scale="1 1 1" Tag="" WorldPos="-9.5 0 -3.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="18" Name="wall_default_17" Rotation="0.000375986 1.5708 0.000376225" Scale="1 1 1" Tag="" WorldPos="-9.5 0 0.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="19" Name="wall_default_18" Rotation="0.000375986 1.5708 0.000376225" Scale="1 1 1" Tag="" WorldPos="-9.5 0 4.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="20" Name="wall_door_way_1" Rotation="3.14159 8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="0.5 0 6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="21" Name="wall_door_way_2" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0.5 0 6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="23" Name="wall_door_frame_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="0.5 0 6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="24" Name="wall_default_19" Rotation="0 -4.52995e-006 0" Scale="1 1 1" Tag="" WorldPos="-3.5 0 6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="25" Name="wall_default_20" Rotation="0 -4.52995e-006 0" Scale="1 1 1" Tag="" WorldPos="4.5 0 6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="26" Name="wall_default_21" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="-3.5 0 8.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="27" Name="wall_default_22" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="4.5 0 8.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="28" Name="wall_default_23" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="4.5 0 12.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="29" Name="wall_default_24" Rotation="0 1.5708 0" Scale="1 1 1" Tag="" WorldPos="-3.5 0 12.75" />
+            </StaticObjects>
+            <Primitives>
+                <Plane Active="true" AlignToWorldCoords="false" CastShadows="false" Collides="true" Corner1UV="0 24" Corner2UV="0 0" Corner3UV="20.5 0" Corner4UV="20.5 24" EndCorner="20.5 0 24" Group="0" ID="0" Material="D:/Steam/SteamApps/common/Amnesia The Dark Descent/static_objects/castlebase/floor/castlebase_tiledfloor02.mat" Name="Plane" Rotation="0 0 0" Scale="1 1 1" StartCorner="0 0 0" Tag="" TextureAngle="0" TileAmount="1 1 1" TileOffset="0 0 0" WorldPos="-9.5 0 -9.25" />
+            </Primitives>
+            <Decals />
+            <Entities>
+                <Entity Active="true" FileIndex="0" Group="0" ID="30" Name="corpse_male_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-6 0 3.5">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="StaticPhysics" Value="false" />
+                        <Var Name="IsAffectedByDecal" Value="false" />
+                        <Var Name="CallbackFunc" Value="" />
+                        <Var Name="ConnectedProps" Value="" />
+                        <Var Name="ConnectionStateChangeCallback" Value="" />
+                        <Var Name="FullGameSave" Value="false" />
+                        <Var Name="PlayerLookAtCallback" Value="" />
+                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
+                        <Var Name="PlayerInteractCallback" Value="" />
+                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
+                        <Var Name="ContainedItem" Value="None" />
+                        <Var Name="DisableBreakable" Value="false" />
+                        <Var Name="IsInsanityVision" Value="false" />
+                        <Var Name="VisionMaxSanity" Value="30" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="1" Group="0" ID="31" Name="corpse_pile1_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="2.75 0 4">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="IsAffectedByDecal" Value="true" />
+                    </UserVariables>
+                </Entity>
+                <Entity Active="true" FileIndex="2" Group="0" ID="32" Name="corpse_pile2_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-2.25 0 2.75">
+                    <UserVariables>
+                        <Var Name="CastShadows" Value="true" />
+                        <Var Name="IsAffectedByDecal" Value="true" />
+                    </UserVariables>
+                </Entity>
+            </Entities>
+            <Misc />
+            <StaticObjectCombos />
+        </MapContents>
+    </MapData>
+</Level>

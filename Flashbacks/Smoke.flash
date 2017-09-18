@@ -1,0 +1,5 @@
+<Flashback>
+	<Voices>
+		<Voice VoiceSound="smoke.ogg" EffectSound="" TextCat="Flashback" TextEntry="Smoke" />
+	</Voices>
+</Flashback>

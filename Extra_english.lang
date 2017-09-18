@@ -1,0 +1,119 @@
+<LANGUAGE>
+	<CATEGORY Name="CustomStoryMain">
+		<Entry Name="Description">Anually Lord Gregory hosts his dinner party, a most popular event for the people of the city of Chichester in England.[br][br]You had been invited to Gregory's mansion to celebrate his mistress' birthday, but decided not to go. Every time Gregory hosts his dinner, people dissapear and are never seen again.[br][br]As a local investigator you have been sent to figure out what is going on at Gregory's mansion.[br][br]What has happend to the population of Chichester? Is Gregory a lunatic or is there something else afoot?</Entry>
+	</CATEGORY>
+
+	<CATEGORY Name="Journal">
+
+/////////////////////////////////////////////////////////////////////////////////
+//------------------------------------Notes------------------------------------//
+/////////////////////////////////////////////////////////////////////////////////
+
+		<Entry Name="Note_Painting_Name">The Old Painting</Entry>
+		<Entry Name="Note_Painting_Text">[voice Caretaker.ogg][br]Dear Lord Gregory.[br][br][br]If you should be so unfortunate to lock yourself out of the office, the one by your old bedroom. I have arranged a way to get in.[br]If you look beyond the cave where people worship the infant you will find a way in.[br][br] However there are many caves, select the right one and the sparekey will be found.[br][br]PS: I've put the key to the Dining Hall in the bookshelf within the office.[br][br] - Caretaker Wilson.</Entry>
+		<Entry Name="Note_Clue_Name">Reflective notes on "The Shadow"</Entry>
+		<Entry Name="Note_Clue_Text">For several weeks I have been followed by something I have no other name for than the shadow.[br][br]First it consumed the cellar, and now the path to the storage has been affected aswell.[br][br]The chefs has been working on a solution, and has come up with a strong liquid able to tear down most of the shadows residue.[br]The only problem is the fact that the liquid is stored in the cellar, I have no intentions of going down there without the servants.[br][br]There is something down there, something I would never want to face alone.</Entry>
+/////////////////////////////////////////////////////////////////////////////////
+//-----------------------------------Diaries-----------------------------------//
+/////////////////////////////////////////////////////////////////////////////////
+
+		<Entry Name="Diary_diary1_Name">End of the World</Entry>
+		<Entry Name="Diary_diary1_Text">21 December, 2012[br][br][br]The ground is literally shaking beneath my feat.</Entry>
+
+/////////////////////////////////////////////////////////////////////////////////
+//-----------------------------------Mementos----------------------------------//
+/////////////////////////////////////////////////////////////////////////////////
+
+		<Entry Name="Quest_memento1_Text">The door to the office is locked. Maybe there is a key somewhere.</Entry>
+		<Entry Name="Quest_memento2_Text">The door to the dining hall seems locked, is there a key to the door?</Entry>
+		<Entry Name="Quest_memento3_Text">There seems to be another room behind the bookshelf in the study. Is there a way in?</Entry>
+		<Entry Name="Quest_memento4_Text">The door to the cellar is locked. A key is needed.</Entry>
+		<Entry Name="Quest_memento5_Text">Slime is blocking the way, neither hands nor tools can break it.</Entry>
+		<Entry Name="Quest_memento6_Text">There is a broken ladder in the archives. Find a way to fix it.</Entry>
+		<Entry Name="Quest_memento7_Text">The wall in the upper part of the Archives looks to be breakable, break it down.</Entry>
+		<Entry Name="Quest_memento8_Text">A note I found mentioned something about a strong liquid in the cellar being able to remove residue of something called the "Shadow". This liquid could possibly help me progess through the castle.</Entry>
+	</CATEGORY>
+
+/////////////////////////////////////////////////////////////////////////////////
+//----------------------------Item Names/Descriptions--------------------------//
+/////////////////////////////////////////////////////////////////////////////////
+
+	<CATEGORY Name="Inventory">
+		<Entry Name="ItemName_key1">Office Key</Entry>
+		<Entry Name="ItemDesc_key1">The key to the old office.</Entry>
+		<Entry Name="ItemName_key2">Dining Hall Key</Entry>
+		<Entry Name="ItemDesc_key2">The key to the dining hall.</Entry>
+		<Entry Name="ItemName_key3">Cellar Key</Entry>
+		<Entry Name="ItemDesc_key3">The key to the Cellar.</Entry>
+		<Entry Name="ItemName_key4">East Wing Key</Entry>
+		<Entry Name="ItemDesc_key4">The key to the East Wing of the mansion.</Entry>
+		<Entry Name="ItemName_Crowbar">Crowbar</Entry>
+		<Entry Name="ItemDesc_Crowbar">Great for opening jammed doors.</Entry>
+		<Entry Name="ItemName_Hammer">Hammer</Entry>
+		<Entry Name="ItemDesc_Hammer">A little loose, yet a sturdy hammer.</Entry>
+		<Entry Name="ItemName_Acid">Acid Container</Entry>
+		<Entry Name="ItemDesc_Acid">Will dissolve tough tissue.</Entry>
+		<Entry Name="ItemName_Stige">Ladder Part</Entry>
+		<Entry Name="ItemDesc_Stige">A part of a ladder.</Entry>
+	</CATEGORY>
+
+/////////////////////////////////////////////////////////////////////////////////
+//------------------------------------Signs------------------------------------//
+/////////////////////////////////////////////////////////////////////////////////
+
+	<CATEGORY Name="Sign">
+		<Entry Name="Sign1">"Office"</Entry>
+		<Entry Name="Sign2">"Guest rooms"</Entry>
+		<Entry Name="Sign3">"Cellar"</Entry>
+		<Entry Name="Sign4">There seems to be another room behind the bookshelf.</Entry>
+		<Entry Name="Sign5">The door is locked. A key is needed.</Entry>
+		<Entry Name="Sign6">The door is locked. A key is needed.</Entry>
+		<Entry Name="Sign7">"Map of Spain"</Entry>
+		<Entry Name="Sign8">"Map of Prussia""</Entry>
+		<Entry Name="Sign9">The lock is broken, A key wont work.</Entry>
+		<Entry Name="Sign10">Chapter 2 - Point of No Return</Entry>
+		<Entry Name="Sign11">The head fell off the hammer, it's no longer usable..</Entry>
+		<Entry Name="Sign12">"Study"</Entry>
+		<Entry Name="Sign420">"Chapter 1 - A Sticky Situation"</Entry>
+
+
+	</CATEGORY>
+
+/////////////////////////////////////////////////////////////////////////////////
+//------------------------------------Flashback--------------------------------//
+/////////////////////////////////////////////////////////////////////////////////
+
+	<CATEGORY Name="Flashback">
+		<Entry Name="crowd.ogg"></Entry>
+	</CATEGORY>
+
+/////////////////////////////////////////////////////////////////////////////////
+//------------------------------------Levels-----------------------------------//
+/////////////////////////////////////////////////////////////////////////////////
+
+	<CATEGORY Name="Levels">
+		<Entry Name="Storage">Storage</Entry>
+		<Entry Name="Mansion West Wing">Mansion West Wing</Entry>
+		<Entry Name="Entrance Hall">Entrance Hall</Entry>
+		<Entry Name="Cellar">Cellar</Entry>
+		<Entry Name="Storage B">Storage B</Entry>
+		<Entry Name="Triclinium">Triclinium</Entry>
+		<Entry Name="Triclinium">Triclinium</Entry>
+		<Entry Name="Triclinium">Triclinium</Entry>
+		<Entry Name="Triclinium">Triclinium</Entry>
+		<Entry Name="HiddenLib">Hidden Library</Entry>
+		<Entry Name="Study">Study</Entry>
+		<Entry Name="Nytt">Cellar</Entry>
+		<Entry Name="Cellar">Cellar</Entry>
+		<Entry Name="Mansion East Wing">Mansion East Wing</Entry>
+
+	</CATEGORY>
+
+/////////////////////////////////////////////////////////////////////////////////
+//----------------------------------Death Hints--------------------------------//
+/////////////////////////////////////////////////////////////////////////////////
+
+	<CATEGORY Name="DeathHint">
+		<Entry Name="Entry1">Persist, dont linger...</Entry>
+	</CATEGORY>
+</LANGUAGE>

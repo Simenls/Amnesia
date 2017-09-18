@@ -1,0 +1,51 @@
+//This is only executed when the map is loaded for the first time.
+//Only happens once. Can be used for adding effects and callbacks that should not repeat.//
+void OnStart()
+{
+  AddEntityCollideCallback("Player", "Ost", "Tak", true, 1);
+}
+void Tak(string &in asParent, string &in asChild, int alState)
+{
+  SetPropHealth("Tak", 0);
+  SetEntityActive("Grunt", true);
+  ShowEnemyPlayerPosition("Grunt");
+  PlaySoundAtEntity("", "break_wood_metal.snt", "Player", 0, true);
+  AddTimer("", 2, "NesteTak");
+}
+void NesteTak(string &in asTimer)
+{
+	SetEntityActive("Grunt_1", true);
+  ShowEnemyPlayerPosition("Grunt_1");
+  AddTimer("", 1.5, "SnuTre");
+  PlaySoundAtEntity("", "break_wood_metal.snt", "Player", 0, true);
+  SetPropHealth("Tak_1", 0);
+}
+void SprengDoor(string &in asEntity)
+{
+  SetPropHealth("Castle", 0);
+  SetEntityActive("Ekstra", true);
+  SetEntityActive("Ekstra_1", true);
+  ShowEnemyPlayerPosition("Ekstra");
+  ShowEnemyPlayerPosition("Ekstra_1");
+  AddEnemyPatrolNode("Ekstra", "PathNodeArea_1", 0, "");
+  AddEnemyPatrolNode("Ekstra", "PathNodeArea_2", 0, "");
+  AddEnemyPatrolNode("Ekstra", "PathNodeArea_3", 0, "");
+  AddEnemyPatrolNode("Ekstra_1", "PathNodeArea_4", 0, "");
+  AddEnemyPatrolNode("Ekstra_1", "PathNodeArea_5", 0, "");
+  AddEnemyPatrolNode("Ekstra_1", "PathNodeArea_6", 0, "");
+  AddEnemyPatrolNode("Ekstra_1", "PathNodeArea_7", 0, "");
+  AddEnemyPatrolNode("Ekstra_1", "PathNodeArea_8", 0, "");
+}
+//This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+}
+
+
+
+
+//This is executed every time you leave the level. //Can be executed several times. Can be used for stopping music or ending effects.//
+void OnLeave()
+{
+
+}

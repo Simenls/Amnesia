@@ -1,0 +1,278 @@
+//This is only executed when the map is loaded for the first time.
+//Only happens once. Can be used for adding effects and callbacks that should not repeat.//
+void OnStart()
+{
+  AddEntityCollideCallback("Player", "KillTheLights", "LightsOut", true, 1);
+}
+void LightsOut(string &in asParent, string &in asChild, int alState)
+{
+  PlayMusic("20_puzzle.ogg", false, 1, 3, 1, true);
+  SetLampLit("lamp_1", true, true);
+	AddTimer("", 0.2, "Out2");
+	AddTimer("", 0, "Nr2");
+	PlayMusic("20_puzzle.ogg", false, 1, 3, 1, true);
+	AddTimer("", 18, "StopMusic");
+}
+
+void Out2(string &in asTimer)
+{
+	SetLampLit("lamp_2", true, true);
+	AddTimer("", 0.2, "Out3");
+	AddTimer("", 0.3, "Nr3");
+}
+
+void Out3(string &in asTimer)
+{
+	SetLampLit("lamp_3", true, true);
+	AddTimer("", 0.2, "Out4");
+	AddTimer("", 0.3, "Nr4");
+}
+
+void Out4(string &in asTimer)
+{
+	SetLampLit("lamp_4", true, true);
+	AddTimer("", 0.2, "Out5");
+	AddTimer("", 0.3, "Nr5");
+}
+
+void Out5(string &in asTimer)
+{
+	SetLampLit("lamp_5", true, true);
+	AddTimer("", 0.2, "Out6");
+	AddTimer("", 0.3, "Nr6");
+}
+
+void Out6(string &in asTimer)
+{
+	SetLampLit("lamp_6", true, true);
+	AddTimer("", 0.2, "Out7");
+	AddTimer("", 0.3, "Nr7");
+}
+
+void Out7(string &in asTimer)
+{
+	SetLampLit("lamp_7", true, true);
+	AddTimer("", 0.2, "Out8");
+	AddTimer("", 0.3, "Nr8");
+}
+
+void Out8(string &in asTimer)
+{
+	SetLampLit("lamp_8", true, true);
+	AddTimer("", 0.2, "Out9");
+	AddTimer("", 0.3, "Nr9");
+}
+
+void Out9(string &in asTimer)
+{
+	SetLampLit("lamp_9", true, true);
+	AddTimer("", 0.2, "Out10");
+	AddTimer("", 0.3, "Nr10");
+}
+void Out10(string &in asTimer)
+{
+	SetLampLit("lamp_10", true, true);
+	AddTimer("", 0.2, "Out11");
+	AddTimer("", 0.3, "Nr11");
+}
+void Out11(string &in asTimer)
+{
+	SetLampLit("lamp_11", true, true);
+	AddTimer("", 0.2, "Out12");
+	AddTimer("", 0.3, "Nr12");
+}
+void Out12(string &in asTimer)
+{
+	SetLampLit("lamp_12", true, true);
+	AddTimer("", 0.2, "Out13");
+	AddTimer("", 0.3, "Nr13");
+}
+void Out13(string &in asTimer)
+{
+	SetLampLit("lamp_13", true, true);
+	AddTimer("", 0.2, "Out14");
+	AddTimer("", 0.3, "Nr14");
+}
+void Out14(string &in asTimer)
+{
+	SetLampLit("lamp_14", true, true);
+	AddTimer("", 0.2, "Out15");
+	AddTimer("", 0.3, "Nr15");
+}
+void Out15(string &in asTimer)
+{
+	SetLampLit("lamp_15", true, true);
+	AddTimer("", 0.2, "Out16");
+	AddTimer("", 0.3, "Nr16");
+}
+void Out16(string &in asTimer)
+{
+	SetLampLit("lamp_16", true, true);
+	AddTimer("", 0.2, "Out17");
+	AddTimer("", 0.3, "Nr17");
+}
+void Out17(string &in asTimer)
+{
+	SetLampLit("lamp_17", true, true);
+	AddTimer("", 0.2, "Out18");
+	AddTimer("", 0.3, "Nr18");
+}
+void Out18(string &in asTimer)
+{
+	SetLampLit("lamp_18", true, true);
+	AddTimer("", 0.2, "Out19");
+	AddTimer("", 0.3, "Nr19");
+}
+
+void Out19(string &in asTimer)
+{
+	SetLampLit("lamp_19", true, true);
+	AddTimer("", 0.2, "Out20");
+	AddTimer("", 0.3, "Nr20");
+}
+
+void Out20(string &in asTimer)
+{
+	SetLampLit("lamp_20", true, true);
+	AddTimer("", 1, "Out21");
+	AddTimer("", 0.3, "Nr21");
+}
+
+void Out21(string &in asTimer)
+{
+	SetLampLit("fire", true, true);
+	SetLampLit("fire_1", true, true);
+	SetLampLit("fire_2", true, true);
+	AddTimer("", 0.3, "Nr22");
+}
+
+void StopMusic(string &in asTimer)
+{
+	StopMusic(2.0f, 5);
+}
+void Nr2(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_1", 3, 10,"");
+}
+
+void Nr3(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_2", 3, 10,"");
+}
+
+void Nr4(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_3", 3, 10,"");
+}
+
+void Nr5(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_4", 3, 10,"");
+}
+
+void Nr6(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_5", 3, 10,"");
+}
+
+void Nr7(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_6", 3, 10,"");
+}
+
+void Nr8(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_7", 3, 10,"");
+}
+
+void Nr9(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_8", 3, 10,"");
+}
+
+void Nr10(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_9", 3, 10,"");
+}
+
+void Nr11(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_10", 3, 10,"");
+}
+
+void Nr12(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_11", 3, 10,"");
+}
+
+void Nr13(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_12", 3, 10,"");
+}
+
+void Nr14(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_13", 3, 10,"");
+}
+
+void Nr15(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_14", 3, 10,"");
+}
+
+void Nr16(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_15", 3, 10,"");
+}
+
+void Nr17(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_16", 3, 10,"");
+}
+
+void Nr18(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_17", 3, 10,"");
+}
+
+void Nr19(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_18", 3, 10,"");
+}
+
+void Nr20(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_19", 3, 10,"");
+}
+
+void Nr21(string &in asTimer)
+{
+	StartPlayerLookAt("lamp_20", 3, 10,"");
+}
+
+void Nr22(string &in asTimer)
+{
+	StartPlayerLookAt("fire", 3, 10,"");
+	AddTimer("", 1.5, "Stopp");
+}
+
+void Stopp(string &in asTimer)
+{
+	StopPlayerLookAt();
+}
+//This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+
+}
+
+
+
+
+
+
+//This is executed every time you leave the level. //Can be executed several times. Can be used for stopping music or ending effects.//
+void OnLeave()
+{
+
+}
