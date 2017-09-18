@@ -1,0 +1,25 @@
+//This is only executed when the map is loaded for the first time.
+//Only happens once. Can be used for adding effects and callbacks that should not repeat.//
+void OnStart()
+{
+  AddEntityCollideCallback("Player", "Open", "Scare", true, 1);
+}
+
+void Scare(string &in asParent, string &in asChild, int alState)
+{
+  AddPropForce("Skummel", 1000, 0, 0, "world");
+  PlaySoundAtEntity("", "21_screams.snt", "Player", 0, false);
+  PlaySoundAtEntity("", "lurker_hit_wood.snt", "Skummel", 0, false);
+  SetEntityActive("Grunt", true);
+  SetEntityActive("Grunt_1", true);
+}
+//This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+
+}
+//This is executed every time you leave the level. //Can be executed several times. Can be used for stopping music or ending effects.//
+void OnLeave()
+{
+
+}
