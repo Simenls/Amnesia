@@ -5,7 +5,7 @@
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="16.4683 180 -19.1289" CameraTarget="16.4683 0 -19.1289" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="10.1782 9.30636 -21.3598" CameraTarget="9.87734 -2 -16.4505" CameraZoom="1.4" GridHeight="-2" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="8.73602 11.7179 -21.0806" CameraTarget="8.20097 -2 -14.8897" CameraZoom="1.2" GridHeight="-2" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -3977,7 +3977,7 @@
                         <Var Name="DisableBreakable" Value="false" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="8" Group="0" ID="1023" Name="torch_static01_nosound_42" Rotation="3.14159 2.17755e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="6.75 1.75 -16.5">
+                <Entity Active="true" FileIndex="8" Group="0" ID="1023" Name="torch_static01_nosound_42" Rotation="3.14159 2.17755e-006 3.14159" Scale="1 1 1" Tag="" WorldPos="4.25 1.75 -16.5">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -5087,7 +5087,7 @@
                         <Var Name="MaxFocusDistance" Value="-1" />
                     </UserVariables>
                 </Area>
-                <Area Active="true" AreaType="PlayerStart" Group="0" ID="1149" Mesh="" Name="PlayerStartArea_4" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="7.25 0.25 -18.5">
+                <Area Active="true" AreaType="PlayerStart" Group="0" ID="1149" Mesh="" Name="PlayerStartArea_4" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="9.75 0.25 -18.5">
                     <UserVariables />
                 </Area>
             </Entities>
