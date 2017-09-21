@@ -1,0 +1,28 @@
+//This is only executed when the map is loaded for the first time.
+//Only happens once. Can be used for adding effects and callbacks that should not repeat.//
+void OnStart()
+{
+  AddEntityCollideCallback("Player", "Knus", "Musikk", true, 1);
+  AddEntityCollideCallback("Player", "hei", "hade", true, 1);
+}
+void Musikk(string &in asParent, string &in asChild, int alState)
+{
+  PlayMusic("01_amb_darkness.ogg", true, 1, 2, 1, true);
+}
+void hade(string &in asParent, string &in asChild, int alState)
+{
+  StartScreenShake(0.01f, 1.0f, 4.0f,8.0f);
+  PlaySoundAtEntity("", "04_big_feet.snt", "Player", 0, true);
+  CreateParticleSystemAtEntity("FallingDust", "ps_dust_falling_door.ps", "Dust", true);
+}
+
+//This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+
+}
+//This is executed every time you leave the level. //Can be executed several times. Can be used for stopping music or ending effects.//
+void OnLeave()
+{
+
+}
