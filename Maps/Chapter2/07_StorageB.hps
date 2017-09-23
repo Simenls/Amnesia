@@ -4,6 +4,7 @@ void OnStart()
 {
   AddEntityCollideCallback("Player", "Knus", "Musikk", true, 1);
   AddEntityCollideCallback("Player", "hei", "hade", true, 1);
+  AddEntityCollideCallback("Player", "Mats", "Kul", true, 1);
 }
 void Musikk(string &in asParent, string &in asChild, int alState)
 {
@@ -15,7 +16,11 @@ void hade(string &in asParent, string &in asChild, int alState)
   PlaySoundAtEntity("", "04_big_feet.snt", "Player", 0, true);
   CreateParticleSystemAtEntity("FallingDust", "ps_dust_falling_door.ps", "Dust", true);
 }
-
+void Kul(string &in asParent, string &in asChild, int alState)
+{
+  SetEntityActive("Gulnes", true);
+  ShowEnemyPlayerPosition("Gulnes<<");
+}
 //This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
 void OnEnter()
 {
