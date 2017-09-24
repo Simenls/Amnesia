@@ -1,7 +1,6 @@
 //This is only executed when the map is loaded for the first time.
 //Only happens once. Can be used for adding effects and callbacks that should not repeat.//
 void OnStart()
-
 {
   AddUseItemCallback("", "Ladder", "AreaUseItem", "StigeComplete", true);
   AddEntityCollideCallback("Player", "Skummelt", "Sanity", true, 1);
@@ -116,27 +115,29 @@ void Slag(string &in asTimer)
   PlaySoundAtEntity("", "react_scare", "Player", 0, false);
   StartPlayerLookAt("DoorPound", 5, 10, "");
   PlaySoundAtEntity("", "enabled01.snt", "DoorPound", 0, false);
-  AddTimer("", 1, "Slag2");
+  AddTimer("", 0.8, "Slag2");
 }
 void Slag2(string &in asTimer)
 {
   StopPlayerLookAt();
   PlayMusic("15_event_prisoner.ogg", false, 1, 4, 1, true);
+  StartScreenShake(0.01f, 1.0f, 4.0f,8.0f);
   CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
   PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
   AddTimer("", 0.2, "Slag3");
 }
-void SlagTre(string &in asTimer)
+void Slag3(string &in asTimer)
 {
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag4");
+    CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
+    PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
+    AddTimer("", 0.2, "Slag4");
 }
 void Slag4(string &in asTimer)
 {
   CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
   PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
   AddTimer("", 0.2, "Slag5");
+
 }
 void Slag5(string &in asTimer)
 {
@@ -160,7 +161,7 @@ void Slag8(string &in asTimer)
 {
   CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
   PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag9");
+  AddTimer("", 1.5, "Slag9");
 }
 void Slag9(string &in asTimer)
 {
@@ -208,7 +209,7 @@ void Slag16(string &in asTimer)
 {
   CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
   PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag17");
+  AddTimer("", 1.5, "Slag17");
 }
 void Slag17(string &in asTimer)
 {
@@ -262,16 +263,7 @@ void Slag26(string &in asTimer)
 {
   CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
   PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Done");
 }
-void Done(string &in asTimer)
-{
-  PlaySoundAtEntity("", "enemy_hallucination_disappear.snt", "DoorPound", 0, false);
-}
-
-
-
-
 //This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
 void OnEnter()
 {

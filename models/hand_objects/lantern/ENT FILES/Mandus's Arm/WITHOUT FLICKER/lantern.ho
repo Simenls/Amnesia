@@ -1,0 +1,49 @@
+<HandObject>
+	<Main
+		Model = "hand_lantern.ent"
+		Type= "LightSource"
+	
+	/>
+
+	<Settings
+		OffsetScale = "1 1 1"
+		OffsetRotation = "90 0 10"
+		OffsetPosition = "0.015 -0.005 0.011"
+			
+		HandsAnim_Idle = "Lantern_Idle"
+		HandsAnim_Draw = "Lantern_Draw"
+		HandsAnim_Holster = "Lantern_Holster"
+		
+		AttachBoneName = "attachpoint"
+				
+		FadeInTime = "1"
+		FadeOutTime = "1"
+		
+		HasSwayPhysics = "true"
+		MaxSwayVel = "15"
+		SwayAngleLimits = "-13 90"
+		SwayDownAngleLimits = "-7 80"
+		SwayPinDir = "0 0 1"
+		SwayGravity = "12"
+		SwayFriction = "1.0"
+		SwayPlayerSpeedMul = "0.015"
+		SwayCameraRollMul = "1"
+    
+    MinTimeBetweenFailures = "10"
+    MaxTimeBetweenFailures = "10"
+    
+    ChanceOfFlickerFailure = "1.0"
+    MinTimeInFailureFlickering = "120"
+    MaxTimeInFailureFlickering = "150"
+    
+    ChanceOfDeadFailure = "0"
+    MinTimeInFailureDead = "5"
+    MaxTimeInFailureDead = "15"
+		
+    ChanceFlickerComesAfterDeadFailure = "0.3"
+    ChanceDeadComesAfterFlickerFailure = "0.3"
+    
+		SkipSwaySubMesh = "mandus_lantern_handle"
+	/>
+
+</HandObject>

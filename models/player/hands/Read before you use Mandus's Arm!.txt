@@ -1,0 +1,1 @@
+If you are going to use Mandus's arm you MUST use the Mandus Lantern .ent and .ho file!
