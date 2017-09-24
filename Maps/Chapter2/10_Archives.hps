@@ -104,6 +104,8 @@ void SeNed(string &in asTimer)
 void Pound(string &in asParent, string &in asChild, int alState)
 {
   SetSwingDoorClosed("mansion_11", true, true);
+  SetEntityActive("armchair_5", true);
+  SetEntityActive("armchair_4", false);
   PlaySoundAtEntity("", "hit_wood3.snt", "DoorPound", 0, false);
 	PlaySoundAtEntity("", "close_door.snt", "Player", 0, false);
   AddTimer("", 0.5, "Slag");
@@ -114,156 +116,36 @@ void Slag(string &in asTimer)
   PlaySoundAtEntity("", "react_breath_slow.snt", "Player", 0, false);
   PlaySoundAtEntity("", "react_scare", "Player", 0, false);
   StartPlayerLookAt("DoorPound", 5, 10, "");
-  PlaySoundAtEntity("", "enabled01.snt", "DoorPound", 0, false);
-  AddTimer("", 0.8, "Slag2");
+  PlaySoundAtEntity("", "enabled03.snt", "DoorPound", 0, false);
+  AddTimer("", 0.8, "StartPound");
 }
-void Slag2(string &in asTimer)
+int slagloop=0;
+void StartPound(string &in asTimer)
 {
   StopPlayerLookAt();
   PlayMusic("15_event_prisoner.ogg", false, 1, 4, 1, true);
   StartScreenShake(0.01f, 1.0f, 4.0f,8.0f);
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag3");
+  AddTimer("", 0.2, "PoundStart");
 }
-void Slag3(string &in asTimer)
+void PoundStart(string &in asTimer)
 {
+
     CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
     PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-    AddTimer("", 0.2, "Slag4");
+    if(GetLocalVarInt("slagloop") <20){
+      SetLocalVarInt("slagloop", (GetLocalVarInt("slagloop")+1));
+      if((GetLocalVarInt("slagloop")==8)){
+        AddTimer("", 1.5, "PoundStart");
+      }
+      else if(((GetLocalVarInt("slagloop")%12)==0)){
+        AddTimer("", 1.5, "PoundStart");
+      }
+      else{
+        AddTimer("", 0.2, "PoundStart");
+      }
+    }
 }
-void Slag4(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag5");
 
-}
-void Slag5(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag6");
-}
-void Slag6(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag7");
-}
-void Slag7(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag8");
-}
-void Slag8(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 1.5, "Slag9");
-}
-void Slag9(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag10");
-}
-void Slag10(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag11");
-}
-void Slag11(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag12");
-}
-void Slag12(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag13");
-}
-void Slag13(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag14");
-}
-void Slag14(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag15");
-}
-void Slag15(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 2.5, "Slag16");
-}
-void Slag16(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 1.5, "Slag17");
-}
-void Slag17(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag18");
-}
-void Slag18(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag19");
-}
-void Slag19(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag20");
-}
-void Slag20(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag21");
-}
-void Slag22(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag23");
-}
-void Slag23(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag24");
-}
-void Slag24(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag25");
-}
-void Slag25(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-  AddTimer("", 0.2, "Slag26");
-}
-void Slag26(string &in asTimer)
-{
-  CreateParticleSystemAtEntity("", "ps_dust_impact.ps", "DoorPound", false);
-  PlaySoundAtEntity("", "lurker_hit_wood.snt", "DoorPound", 0, false);
-}
 //This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
 void OnEnter()
 {
