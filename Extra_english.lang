@@ -32,6 +32,7 @@
 		<Entry Name="Quest_memento6_Text">There is a broken ladder in the archives. Find a way to fix it.</Entry>
 		<Entry Name="Quest_memento7_Text">The wall in the upper part of the Archives looks to be breakable, break it down.</Entry>
 		<Entry Name="Quest_memento8_Text">A note I found mentioned something about a strong liquid in the cellar being able to remove residue of something called the "Shadow". This liquid could possibly help me progess through the castle.</Entry>
+		<Entry Name="Quest_memento9_Text">The door won't budge, is there another way in?</Entry>
 	</CATEGORY>
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -75,6 +76,7 @@
 		<Entry Name="Sign11">The head fell off the hammer, it's no longer usable..</Entry>
 		<Entry Name="Sign12">"Study"</Entry>
 		<Entry Name="Sign13">"Local History"</Entry>
+		<Entry Name="Sign14">"It won't budge, the locked seems to be broken."</Entry>
 		<Entry Name="Sign420">"Chapter 1 - A Sticky Situation"</Entry>
 
 

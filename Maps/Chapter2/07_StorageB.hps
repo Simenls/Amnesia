@@ -4,7 +4,9 @@ void OnStart()
 {
   AddEntityCollideCallback("Player", "Knus", "Musikk", true, 1);
   AddEntityCollideCallback("Player", "hei", "hade", true, 1);
-  AddEntityCollideCallback("Player", "Mats", "Kul", true, 1);
+  AddEntityCollideCallback("Player", "DoorQuestComplete", "CompleteQuest1", true, 1);
+  AddEntityCollideCallback("Player", "ActivateArea", "AddArea", true, 1);
+  AddEntityCollideCallback("Player", "BruteActivate", "Smash", true, 1);
 }
 void Musikk(string &in asParent, string &in asChild, int alState)
 {
@@ -16,10 +18,33 @@ void hade(string &in asParent, string &in asChild, int alState)
   PlaySoundAtEntity("", "04_big_feet.snt", "Player", 0, true);
   CreateParticleSystemAtEntity("FallingDust", "ps_dust_falling_door.ps", "Dust", true);
 }
-void Kul(string &in asParent, string &in asChild, int alState)
+void Locked(string &in asEntity)
 {
-  SetEntityActive("Gulnes", true);
-  ShowEnemyPlayerPosition("Gulnes<<");
+  SetMessage("Sign", "Sign14", 0);
+  AddQuest("DoorLock", "memento9");
+}
+void CompleteQuest1(string &in asParent, string &in asChild, int alState)
+{
+  CompleteQuest("DoorLock", "memento9");
+  PlayMusic("02_puzzle.ogg", false, 1.0f, 0.5f, 5, false);
+  GiveSanityBoostSmall();
+}
+void AddArea(string &in asParent, string &in asChild, int alState)
+{
+  SetEntityActive("BruteActivate", true);
+}
+void Smash(string &in asParent, string &in asChild, int alState)
+{
+  SetPropHealth("Doorsmash", 0);
+  SetEntityActive("Brute", true);
+  AddEnemyPatrolNode("Brute", "PathNodeArea_1", 0, "");
+  AddEnemyPatrolNode("Brute", "PathNodeArea_2", 0, "");
+  AddTimer("", 2, "MonsterSpot");
+}
+void MonsterSpot(string &in asTimer)
+{
+  ShowEnemyPlayerPosition("Brute");
+
 }
 //This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
 void OnEnter()
