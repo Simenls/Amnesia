@@ -1,7 +1,7 @@
 <Level>
     <EditorSession>
         <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
-        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="false" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="false" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="4.34253 180 1.32604" CameraTarget="4.34253 0 1.32604" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
@@ -35,10 +35,10 @@
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="9" Name="wall_default_9" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="9.25 0 -4.25" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="10" Name="wall_default_10" Rotation="3.14159 -8.74228e-008 3.14159" Scale="1 1 1" Tag="" WorldPos="7.25 0 5.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="11" Name="wall_default_11" Rotation="0 -1.5708 0" Scale="1 1 1" Tag="" WorldPos="9.25 0 3.75" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="12" Name="wall_door_way_1" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="9.25 0 -0.25" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="13" Name="wall_door_way_2" Rotation="2.53518e-006 1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="9.25 0 -0.25" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="14" Name="wall_door_frame_1" Rotation="2.53518e-006 1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="9.25 0.25 -0.25" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="3" Group="0" ID="17" Name="wall_window_blue_1" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="3.25 0 -6.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="12" Name="wall_door_way_1" Rotation="-2.53518e-006 -1.5708 -2.53518e-006" Scale="1 1 1" Tag="" WorldPos="9.25 0 -0.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="13" Name="wall_door_way_2" Rotation="-3.14159 1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="9.25 0 -0.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="14" Name="wall_door_frame_1" Rotation="-3.14159 1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="9.25 0.25 -0.25" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="3" Group="0" ID="17" Name="wall_window_blue_1" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="3.25 0 -6.25" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="2" Group="0" ID="23" Name="wall_door_frame_2" Rotation="3.14159 -8.74229e-008 -3.14159" Scale="1 1 1" Tag="" WorldPos="3.25 0.259604 5.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="24" Name="wall_door_way_3" Rotation="3.14159 -8.74229e-008 -3.14159" Scale="1 1 1" Tag="" WorldPos="3.25 0.00960433 5.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="1" Group="0" ID="25" Name="wall_door_way_4" Rotation="1.74846e-007 8.74229e-008 3.82137e-015" Scale="1 1 1" Tag="" WorldPos="3.25 0.00960433 5.75" />

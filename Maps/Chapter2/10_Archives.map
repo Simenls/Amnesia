@@ -1,11 +1,11 @@
 <Level>
     <EditorSession>
         <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
-        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="true" GPointLight="true" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
             <Viewport CameraPosition="0 0 180" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="180 0 0" CameraTarget="0 0 0" CameraZoom="0" GridHeight="0" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="27.2198 180 -2.68575" CameraTarget="27.2198 0 -2.68575" CameraZoom="0" GridHeight="0" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="34.5778 6.22667 -1.05863" CameraTarget="29.5046 4 -1.05035" CameraZoom="2.19998" GridHeight="4" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-5.16864 16.0599 -8.24665" CameraTarget="-2.53878 4 0.382002" CameraZoom="1.19997" GridHeight="4" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -35,14 +35,14 @@
                 <File Id="18" Path="static_objects/cellarbase/ceiling/welder_corridor_extension.dae" />
                 <File Id="19" Path="static_objects/decals/paper_pile02.dae" />
             </FileIndex_StaticObjects>
-            <FileIndex_Entities NumOfFiles="83">
+            <FileIndex_Entities NumOfFiles="82">
                 <File Id="0" Path="entities/door/level_wood/level_wood.ent" />
                 <File Id="1" Path="entities/door/mansion/mansion.ent" />
                 <File Id="2" Path="entities/storage/shelf02/shelf02.ent" />
                 <File Id="3" Path="entities/storage/shelf_high01/shelf_high01.ent" />
                 <File Id="4" Path="entities/gameplay/ladder/ladder_broken.ent" />
                 <File Id="5" Path="entities/ptest/ladder_move_object/ladder_static.ent" />
-                <File Id="6" Path="entities/ptest/ladder_move_object/ladder_item.ent" />
+                <File Id="6" Path="entities/ornament/arabic_carafe/arabic_carafe.ent" />
                 <File Id="7" Path="entities/gameplay/ladder_moveable/ladder_mount.ent" />
                 <File Id="8" Path="entities/storage/storage_box_wood02/storage_box_wood02.ent" />
                 <File Id="9" Path="entities/storage/storage_box_wood01/storage_box_wood01.ent" />
@@ -118,7 +118,6 @@
                 <File Id="79" Path="entities/container/wood_box03/wood_box03.ent" />
                 <File Id="80" Path="entities/ornament/sketch_disect_dog/sketch_disect_dog02.ent" />
                 <File Id="81" Path="entities/ornament/sketch_disect_human/sketch_disect_human01.ent" />
-                <File Id="82" Path="entities/ornament/arabic_carafe/arabic_carafe.ent" />
             </FileIndex_Entities>
             <FileIndex_Decals NumOfFiles="0" />
             <StaticObjects>
@@ -410,7 +409,7 @@
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="1411" Name="wall_default02_96" Rotation="3.8743e-007 -5.84126e-006 0" Scale="1 1 1" Tag="" WorldPos="21.5 4 5" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="1412" Name="wall_default02_130" Rotation="3.14159 1.02838e-005 3.14159" Scale="1 1 1" Tag="" WorldPos="21.5 4 11.25" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="5" Group="0" ID="1431" Name="ceiling_concave_17" Rotation="0 2.14577e-006 0" Scale="1 1 1" Tag="" WorldPos="31.5 8 -6.75" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="6" Group="0" ID="1432" Name="ceiling_corner_concave_short_5" Rotation="3.14159 -1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="35.5 8 -6.75" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="6" Group="0" ID="1432" Name="ceiling_corner_concave_short_5" Rotation="-2.53518e-006 -1.5708 -2.53518e-006" Scale="1 1 1" Tag="" WorldPos="35.5 8 -6.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="5" Group="0" ID="1433" Name="ceiling_concave_18" Rotation="0 2.14577e-006 0" Scale="1 1 1" Tag="" WorldPos="27.5 8 -6.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="5" Group="0" ID="1434" Name="ceiling_concave_19" Rotation="0 2.14577e-006 0" Scale="1 1 1" Tag="" WorldPos="23.5 8 -6.75" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="6" Group="0" ID="1435" Name="ceiling_corner_concave_short_6" Rotation="0 -5.87106e-006 0" Scale="1 1 1" Tag="" WorldPos="19.5 8 -6.75" />
@@ -420,8 +419,8 @@
                 <StaticObject CastShadows="true" Collides="true" FileIndex="5" Group="0" ID="1440" Name="ceiling_concave_22" Rotation="-3.14159 2.29676e-006 -3.14159" Scale="1 1 1" Tag="" WorldPos="23.5 8 3.99998" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="6" Group="0" ID="1441" Name="ceiling_corner_concave_short_8" Rotation="-0.0198714 1.5708 -0.0198714" Scale="1 1 1" Tag="" WorldPos="19.5 8 3.99996" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="5" Group="0" ID="1443" Name="ceiling_concave_23" Rotation="-1.10716 1.5708 -1.10716" Scale="1 1 1" Tag="" WorldPos="19.5 8 0" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="1445" Name="ceiling_concave_short_1" Rotation="3.14159 1.5708 3.14159" Scale="1.40313 1 1" Tag="" WorldPos="19.5 8 -3.3638" />
-                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="1447" Name="ceiling_concave_short_2" Rotation="-3.12211 -1.5708 3.12211" Scale="1.40313 1 1" Tag="" WorldPos="35.5 8 -3.34792" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="1445" Name="ceiling_concave_short_1" Rotation="-2.53518e-006 1.5708 -2.53518e-006" Scale="1.40313 1 1" Tag="" WorldPos="19.5 8 -3.3638" />
+                <StaticObject CastShadows="true" Collides="true" FileIndex="16" Group="0" ID="1447" Name="ceiling_concave_short_2" Rotation="0.0194828 -1.5708 -0.0194827" Scale="1.40313 1 1" Tag="" WorldPos="35.5 8 -3.34792" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="5" Group="0" ID="1449" Name="ceiling_concave_24" Rotation="-3.10818 -1.5708 3.10818" Scale="1 1 1" Tag="" WorldPos="35.5 8 0" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="0" Group="0" ID="1454" Name="wall_default02_131" Rotation="0.0200128 -1.5708 -0.0200128" Scale="1 1 1" Tag="" WorldPos="35.5 4 2.5" />
                 <StaticObject CastShadows="true" Collides="true" FileIndex="17" Group="0" ID="1494" Name="ceiling_concave_beam_1" Rotation="1 -1 1" Scale="1 1 1" Tag="" WorldPos="-1 -1 -1" />
@@ -613,22 +612,6 @@
                         <Var Name="DisableBreakable" Value="false" />
                         <Var Name="IsInsanityVision" Value="false" />
                         <Var Name="VisionMaxSanity" Value="30" />
-                    </UserVariables>
-                </Entity>
-                <Entity Active="true" FileIndex="6" Group="0" ID="380" Name="Ladder" Rotation="-1.5708 0.0536998 -1.5708" Scale="1 1 1" Tag="" WorldPos="-4.5903 0.151221 5.01293">
-                    <UserVariables>
-                        <Var Name="CastShadows" Value="true" />
-                        <Var Name="StaticPhysics" Value="false" />
-                        <Var Name="IsAffectedByDecal" Value="false" />
-                        <Var Name="CallbackFunc" Value="" />
-                        <Var Name="ConnectedProps" Value="" />
-                        <Var Name="ConnectionStateChangeCallback" Value="" />
-                        <Var Name="FullGameSave" Value="false" />
-                        <Var Name="PlayerLookAtCallback" Value="" />
-                        <Var Name="PlayerLookAtCallbackAutoRemove" Value="false" />
-                        <Var Name="PlayerInteractCallback" Value="" />
-                        <Var Name="PlayerInteractCallbackAutoRemove" Value="false" />
-                        <Var Name="CustomSubItemTypeName" Value="Stige" />
                     </UserVariables>
                 </Entity>
                 <Area Active="true" AreaType="Script" Group="0" ID="382" Mesh="" Name="AreaUseItem" Rotation="0 0 0" Scale="1.05461 1.3 0.547743" Tag="" WorldPos="-4.75 3.33557 7.92108">
@@ -934,7 +917,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="8" Group="0" ID="417" Name="storage_box_wood02_4" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="2 0 8.75">
+                <Entity Active="true" FileIndex="8" Group="0" ID="417" Name="storage_box_wood02_4" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="2 0 8.75">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="IsAffectedByDecal" Value="true" />
@@ -1241,7 +1224,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="9" Group="0" ID="446" Name="storage_box_wood01_9" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-1.24536 1.99791 8.72942">
+                <Entity Active="true" FileIndex="9" Group="0" ID="446" Name="storage_box_wood01_9" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-1.24536 1.99791 8.72942">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -1260,7 +1243,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="9" Group="0" ID="447" Name="storage_box_wood01_10" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-2.19103 2.01261 8.72942">
+                <Entity Active="true" FileIndex="9" Group="0" ID="447" Name="storage_box_wood01_10" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-2.19103 2.01261 8.72942">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -1279,7 +1262,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="9" Group="0" ID="448" Name="storage_box_wood01_11" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-2.19103 1.97264 8.72942">
+                <Entity Active="true" FileIndex="9" Group="0" ID="448" Name="storage_box_wood01_11" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-2.19103 1.97264 8.72942">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -1336,7 +1319,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="9" Group="0" ID="451" Name="storage_box_wood01_14" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-0.481588 0.738518 10.5426">
+                <Entity Active="true" FileIndex="9" Group="0" ID="451" Name="storage_box_wood01_14" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-0.481588 0.738518 10.5426">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -1374,7 +1357,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="9" Group="0" ID="475" Name="storage_box_wood01_32" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="-2.34236 0 9.69435">
+                <Entity Active="true" FileIndex="9" Group="0" ID="475" Name="storage_box_wood01_32" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="-2.34236 0 9.69435">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -2364,7 +2347,7 @@
                 <Area Active="true" AreaType="PathNode" Group="0" ID="709" Mesh="" Name="PathNodeArea_1" Rotation="0 0 0" Scale="0.5 0.5 0.5" Tag="" WorldPos="-15 0.25 1.25">
                     <UserVariables />
                 </Area>
-                <Area Active="true" AreaType="PathNode" Group="0" ID="710" Mesh="" Name="PathNodeArea_2" Rotation="0 0 0" Scale="0.5 0.5 0.5" Tag="" WorldPos="-14.75 0.25 3.5">
+                <Area Active="true" AreaType="PathNode" Group="0" ID="710" Mesh="" Name="PathNodeArea_2" Rotation="0 -0 0" Scale="0.5 0.5 0.5" Tag="" WorldPos="-14.75 0.25 3.5">
                     <UserVariables />
                 </Area>
                 <Area Active="true" AreaType="PathNode" Group="0" ID="711" Mesh="" Name="PathNodeArea_3" Rotation="0 0 0" Scale="0.5 0.5 0.5" Tag="" WorldPos="-14.25 0.25 5.75">
@@ -6258,7 +6241,7 @@
                 <Billboard Active="true" BillboardColor="0.1 0.1 0.134 1" BillboardOffset="0" BillboardSize="2 8" BillboardType="FixedAxis" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="1268" IsHalo="false" MaterialFile="D:/Steam/SteamApps/common/Amnesia The Dark Descent/billboards/bb_lightblue_lightray.mat" Name="Billboard_23" Rotation="3.14159 -0.0412441 -2.35852" Tag="" WorldPos="-21 6.75 5.5" />
                 <Billboard Active="true" BillboardColor="0.1 0.1 0.134 1" BillboardOffset="0" BillboardSize="2 8" BillboardType="FixedAxis" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="1269" IsHalo="false" MaterialFile="D:/Steam/SteamApps/common/Amnesia The Dark Descent/billboards/bb_lightblue_lightray.mat" Name="Billboard_26" Rotation="3.14159 -0.0412441 -2.35852" Tag="" WorldPos="-21 6.75 5.5" />
                 <Billboard Active="true" BillboardColor="0.1 0.1 0.134 1" BillboardOffset="0" BillboardSize="2 8" BillboardType="FixedAxis" ConnectLight="" Group="0" HaloSourceSize="0.3 0.3 0.3" ID="1270" IsHalo="false" MaterialFile="D:/Steam/SteamApps/common/Amnesia The Dark Descent/billboards/bb_lightblue_lightray.mat" Name="Billboard_29" Rotation="3.14159 -0.0412441 -2.35852" Tag="" WorldPos="-21 6.75 5.5" />
-                <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="C:/Program Files (x86)/Steam/steamapps/common/Amnesia The Dark Descent/particles/ps_flies.ps" Group="0" ID="1281" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_2" Rotation="0 0 0" Scale="1 1 1" Tag="" WorldPos="16.9192 5.82203 10.4973" />
+                <ParticleSystem Active="true" Color="1 1 1 1" FadeAtDistance="true" File="C:/Program Files (x86)/Steam/steamapps/common/Amnesia The Dark Descent/particles/ps_flies.ps" Group="0" ID="1281" MaxFadeDistanceEnd="110" MaxFadeDistanceStart="100" MinFadeDistanceEnd="1" MinFadeDistanceStart="2" Name="ParticleSystem_2" Rotation="0 -0 0" Scale="1 1 1" Tag="" WorldPos="16.9192 5.82203 10.4973" />
                 <PointLight Active="true" CastShadows="false" DiffuseColor="0.248 0.148 0.103 1" FalloffMap="" FlickerActive="false" FlickerFade="false" FlickerOffColor="0 0 0 1" FlickerOffFadeMaxLength="0" FlickerOffFadeMinLength="0" FlickerOffMaxLength="0" FlickerOffMinLength="0" FlickerOffPS="" FlickerOffRadius="0" FlickerOffSound="" FlickerOnFadeMaxLength="0" FlickerOnFadeMinLength="0" FlickerOnMaxLength="0" FlickerOnMinLength="0" FlickerOnPS="" FlickerOnSound="" Gobo="" GoboAnimFrameTime="0" GoboAnimMode="None" Group="0" ID="1286" Name="PointLight_1" Radius="1" Rotation="0 0 0" Scale="1 1 1" ShadowResolution="High" ShadowsAffectDynamic="true" ShadowsAffectStatic="true" Tag="" WorldPos="13 5.5 10.5" />
                 <Entity Active="true" FileIndex="1" Group="0" ID="1293" Name="mansion_9" Rotation="0 1.43051e-006 0" Scale="1 1 1" Tag="" WorldPos="13.5 4 4.5">
                     <UserVariables>
@@ -6278,25 +6261,25 @@
                         <Var Name="DisableBreakable" Value="false" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="31" Group="0" ID="1320" Name="shelf_high02_14" Rotation="-2.53518e-006 1.5708 -2.53518e-006" Scale="1 1 1" Tag="" WorldPos="24.8779 4 -1.25">
+                <Entity Active="true" FileIndex="31" Group="0" ID="1320" Name="shelf_high02_14" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="24.8779 4 -1.25">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="31" Group="0" ID="1321" Name="shelf_high02_15" Rotation="2.53518e-006 -1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="23.9581 4 -1.25">
+                <Entity Active="true" FileIndex="31" Group="0" ID="1321" Name="shelf_high02_15" Rotation="-3.14159 -1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="23.9581 4 -1.25">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="31" Group="0" ID="1326" Name="shelf_high02_18" Rotation="2.53518e-006 -1.5708 2.53518e-006" Scale="1 1 1" Tag="" WorldPos="31.2563 4 -1.25">
+                <Entity Active="true" FileIndex="31" Group="0" ID="1326" Name="shelf_high02_18" Rotation="-3.14159 -1.5708 -3.14159" Scale="1 1 1" Tag="" WorldPos="31.2563 4 -1.25">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="31" Group="0" ID="1327" Name="shelf_high02_19" Rotation="3.14159 1.5708 3.14159" Scale="1 1 1" Tag="" WorldPos="32.1761 4 -1.25">
+                <Entity Active="true" FileIndex="31" Group="0" ID="1327" Name="shelf_high02_19" Rotation="-2.53518e-006 1.5708 -2.53518e-006" Scale="1 1 1" Tag="" WorldPos="32.1761 4 -1.25">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="IsAffectedByDecal" Value="true" />
@@ -6592,7 +6575,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1465" Name="book03_6" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="32.7778 4.69902 3.21893">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1465" Name="book03_6" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="32.7778 4.69902 3.21893">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -6611,7 +6594,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1466" Name="book03_7" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="32.5367 4.69902 3.20962">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1466" Name="book03_7" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="32.5367 4.69902 3.20962">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -6649,7 +6632,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="54" Group="0" ID="1468" Name="book01_14" Rotation="-1.44446 -1.5708 3.01525" Scale="1 1 1" Tag="" WorldPos="32.7243 4.82751 3.18689">
+                <Entity Active="true" FileIndex="54" Group="0" ID="1468" Name="book01_14" Rotation="1.69713 -1.5708 -0.126343" Scale="1 1 1" Tag="" WorldPos="32.7243 4.82751 3.18689">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -6668,7 +6651,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1470" Name="book03_8" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="32.4473 4.69902 3.20962">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1470" Name="book03_8" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="32.4473 4.69902 3.20962">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -6687,7 +6670,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1471" Name="book03_9" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="32.3563 4.69902 3.20962">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1471" Name="book03_9" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="32.3563 4.69902 3.20962">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -6706,7 +6689,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1472" Name="book03_10" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="32.2556 4.69902 3.20962">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1472" Name="book03_10" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="32.2556 4.69902 3.20962">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -6942,7 +6925,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1533" Name="book03_11" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="28.5355 4.65 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1533" Name="book03_11" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="28.5355 4.65 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -6961,7 +6944,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1534" Name="book03_12" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="28.4461 4.65 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1534" Name="book03_12" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="28.4461 4.65 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -6980,7 +6963,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1535" Name="book03_13" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="28.2544 4.65 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1535" Name="book03_13" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="28.2544 4.65 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -6999,7 +6982,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1536" Name="book03_14" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="28.3551 4.65 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1536" Name="book03_14" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="28.3551 4.65 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7018,7 +7001,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1537" Name="book03_15" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="28.7766 4.65 3.27372">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1537" Name="book03_15" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="28.7766 4.65 3.27372">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7037,7 +7020,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="54" Group="0" ID="1538" Name="book01_15" Rotation="1.69713 -1.5708 -0.126343" Scale="1 1 1" Tag="" WorldPos="28.7231 4.77849 3.24167">
+                <Entity Active="true" FileIndex="54" Group="0" ID="1538" Name="book01_15" Rotation="-1.44446 -1.5708 3.01525" Scale="1 1 1" Tag="" WorldPos="28.7231 4.77849 3.24167">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7080,7 +7063,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1544" Name="book03_16" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.5355 4.65 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1544" Name="book03_16" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.5355 4.65 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7099,7 +7082,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1545" Name="book03_17" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.4461 4.65 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1545" Name="book03_17" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.4461 4.65 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7118,7 +7101,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1546" Name="book03_18" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.2544 4.65 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1546" Name="book03_18" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.2544 4.65 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7137,7 +7120,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1547" Name="book03_19" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.3551 4.65 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1547" Name="book03_19" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.3551 4.65 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7156,7 +7139,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1548" Name="book03_20" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.7766 4.65 3.27372">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1548" Name="book03_20" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.7766 4.65 3.27372">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7175,7 +7158,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="54" Group="0" ID="1549" Name="book01_16" Rotation="-1.44446 -1.5708 3.01525" Scale="1 1 1" Tag="" WorldPos="24.7231 4.77849 3.24167">
+                <Entity Active="true" FileIndex="54" Group="0" ID="1549" Name="book01_16" Rotation="1.69713 -1.5708 -0.126343" Scale="1 1 1" Tag="" WorldPos="24.7231 4.77849 3.24167">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7218,7 +7201,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1555" Name="book03_21" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.5355 6.15 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1555" Name="book03_21" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.5355 6.15 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7237,7 +7220,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1556" Name="book03_22" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.4461 6.15 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1556" Name="book03_22" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.4461 6.15 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7256,7 +7239,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1557" Name="book03_23" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.2544 6.15 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1557" Name="book03_23" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.2544 6.15 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7275,7 +7258,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1558" Name="book03_24" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.3551 6.15 3.26441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1558" Name="book03_24" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.3551 6.15 3.26441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7294,7 +7277,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1559" Name="book03_25" Rotation="1.58803 -1.5708 -1.58804" Scale="1 1 1" Tag="" WorldPos="24.7766 6.15 3.27372">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1559" Name="book03_25" Rotation="-1.55356 -1.5708 1.55355" Scale="1 1 1" Tag="" WorldPos="24.7766 6.15 3.27372">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7313,7 +7296,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="54" Group="0" ID="1560" Name="book01_17" Rotation="1.69713 -1.5708 -0.126343" Scale="1 1 1" Tag="" WorldPos="24.7231 6.27849 3.24167">
+                <Entity Active="true" FileIndex="54" Group="0" ID="1560" Name="book01_17" Rotation="-1.44446 -1.5708 3.01525" Scale="1 1 1" Tag="" WorldPos="24.7231 6.27849 3.24167">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7356,7 +7339,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1566" Name="book03_26" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.5165 4.71465 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1566" Name="book03_26" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.5165 4.71465 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7375,7 +7358,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1567" Name="book03_27" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.6059 4.71465 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1567" Name="book03_27" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.6059 4.71465 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7394,7 +7377,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1568" Name="book03_28" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.7976 4.71465 -6.0144">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1568" Name="book03_28" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.7976 4.71465 -6.0144">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7413,7 +7396,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1569" Name="book03_29" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.6969 4.71465 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1569" Name="book03_29" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.6969 4.71465 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7432,7 +7415,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1570" Name="book03_30" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.2754 4.71465 -6.02372">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1570" Name="book03_30" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.2754 4.71465 -6.02372">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7451,7 +7434,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="54" Group="0" ID="1571" Name="book01_18" Rotation="1.55253 1.5708 -0.0182626" Scale="1 1 1" Tag="" WorldPos="24.3289 4.84314 -5.99168">
+                <Entity Active="true" FileIndex="54" Group="0" ID="1571" Name="book01_18" Rotation="-1.58906 1.5708 3.12333" Scale="1 1 1" Tag="" WorldPos="24.3289 4.84314 -5.99168">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7494,7 +7477,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1577" Name="book03_31" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.5165 6.12515 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1577" Name="book03_31" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.5165 6.12515 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7513,7 +7496,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1578" Name="book03_32" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.6059 6.12515 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1578" Name="book03_32" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.6059 6.12515 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7532,7 +7515,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1579" Name="book03_33" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.7976 6.12515 -6.0144">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1579" Name="book03_33" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.7976 6.12515 -6.0144">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7551,7 +7534,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1580" Name="book03_34" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.6969 6.12515 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1580" Name="book03_34" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.6969 6.12515 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7570,7 +7553,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1581" Name="book03_35" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="24.2754 6.12515 -6.02372">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1581" Name="book03_35" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="24.2754 6.12515 -6.02372">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7589,7 +7572,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="54" Group="0" ID="1582" Name="book01_19" Rotation="-1.58906 1.5708 3.12333" Scale="1 1 1" Tag="" WorldPos="24.3289 6.25364 -5.99168">
+                <Entity Active="true" FileIndex="54" Group="0" ID="1582" Name="book01_19" Rotation="1.55253 1.5708 -0.0182626" Scale="1 1 1" Tag="" WorldPos="24.3289 6.25364 -5.99168">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7770,7 +7753,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1599" Name="book03_41" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="28.5399 4.74627 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1599" Name="book03_41" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="28.5399 4.74627 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7789,7 +7772,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1600" Name="book03_42" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="28.6293 4.74627 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1600" Name="book03_42" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="28.6293 4.74627 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7808,7 +7791,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1601" Name="book03_43" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="28.821 4.74627 -6.0144">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1601" Name="book03_43" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="28.821 4.74627 -6.0144">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7827,7 +7810,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1602" Name="book03_44" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="28.7203 4.74627 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1602" Name="book03_44" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="28.7203 4.74627 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7846,7 +7829,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1603" Name="book03_45" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="28.2988 4.74627 -6.02372">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1603" Name="book03_45" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="28.2988 4.74627 -6.02372">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7865,7 +7848,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="54" Group="0" ID="1604" Name="book01_21" Rotation="-1.58906 1.5708 3.12333" Scale="1 1 1" Tag="" WorldPos="28.3523 4.87476 -5.99168">
+                <Entity Active="true" FileIndex="54" Group="0" ID="1604" Name="book01_21" Rotation="1.55253 1.5708 -0.0182626" Scale="1 1 1" Tag="" WorldPos="28.3523 4.87476 -5.99168">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7908,7 +7891,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1610" Name="book03_46" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.4591 4.74627 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1610" Name="book03_46" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.4591 4.74627 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7927,7 +7910,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1611" Name="book03_47" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.5485 4.74627 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1611" Name="book03_47" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.5485 4.74627 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7946,7 +7929,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1612" Name="book03_48" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.7402 4.74627 -6.0144">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1612" Name="book03_48" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.7402 4.74627 -6.0144">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7965,7 +7948,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1613" Name="book03_49" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.6395 4.74627 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1613" Name="book03_49" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.6395 4.74627 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -7984,7 +7967,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1614" Name="book03_50" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.218 4.74627 -6.02372">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1614" Name="book03_50" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.218 4.74627 -6.02372">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -8003,7 +7986,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="54" Group="0" ID="1615" Name="book01_22" Rotation="1.55253 1.5708 -0.0182626" Scale="1 1 1" Tag="" WorldPos="32.2715 4.87476 -5.99168">
+                <Entity Active="true" FileIndex="54" Group="0" ID="1615" Name="book01_22" Rotation="-1.58906 1.5708 3.12333" Scale="1 1 1" Tag="" WorldPos="32.2715 4.87476 -5.99168">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -8046,7 +8029,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1621" Name="book03_51" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.4591 6.09676 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1621" Name="book03_51" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.4591 6.09676 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -8065,7 +8048,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1622" Name="book03_52" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.5485 6.09676 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1622" Name="book03_52" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.5485 6.09676 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -8084,7 +8067,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1623" Name="book03_53" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.7402 6.09676 -6.0144">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1623" Name="book03_53" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.7402 6.09676 -6.0144">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -8103,7 +8086,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1624" Name="book03_54" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.6395 6.09676 -6.01441">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1624" Name="book03_54" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.6395 6.09676 -6.01441">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -8122,7 +8105,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="47" Group="0" ID="1625" Name="book03_55" Rotation="3.13174 1.5708 3.13175" Scale="1 1 1" Tag="" WorldPos="32.218 6.09676 -6.02372">
+                <Entity Active="true" FileIndex="47" Group="0" ID="1625" Name="book03_55" Rotation="-0.00985251 1.5708 -0.00984257" Scale="1 1 1" Tag="" WorldPos="32.218 6.09676 -6.02372">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -8141,7 +8124,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="54" Group="0" ID="1626" Name="book01_23" Rotation="-1.58906 1.5708 3.12333" Scale="1 1 1" Tag="" WorldPos="32.2715 6.22525 -5.99168">
+                <Entity Active="true" FileIndex="54" Group="0" ID="1626" Name="book01_23" Rotation="1.55253 1.5708 -0.0182626" Scale="1 1 1" Tag="" WorldPos="32.2715 6.22525 -5.99168">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -8452,7 +8435,7 @@
                         <Var Name="IsAffectedByDecal" Value="true" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="82" Group="0" ID="1669" Name="arabic_carafe_1" Rotation="-3.14159 -1.0472 3.14159" Scale="1 1 1" Tag="" WorldPos="34.4915 5.00365 -2.31171">
+                <Entity Active="true" FileIndex="6" Group="0" ID="1669" Name="arabic_carafe_1" Rotation="-3.14159 -1.0472 3.14159" Scale="1 1 1" Tag="" WorldPos="34.4915 5.00365 -2.31171">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
