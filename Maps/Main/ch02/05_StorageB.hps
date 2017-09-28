@@ -1,0 +1,165 @@
+//This is only executed when the map is loaded for the first time.
+//Only happens once. Can be used for adding effects and callbacks that should not repeat.//
+void OnStart()
+{
+  AddEntityCollideCallback("Player", "hei", "hade", true, 1);
+  AddEntityCollideCallback("Player", "DoorQuestComplete", "CompleteQuest1", true, 1);
+  AddEntityCollideCallback("Player", "BruteActivate", "Smash", true, 1);
+  AddEntityCollideCallback("Player", "BruteActivate", "ActiveMonster", true, 1);
+  AddEntityCollideCallback("Player", "Walker", "WalkerActivate", true, 1);
+  AddEntityCollideCallback("servant_grunt_1", "WalkerGone", "WalkerAway", true, 1);
+  AddEntityCollideCallback("Player", "Shake", "Boo", true, 1);
+}
+void WalkerAway(string &in asParent, string &in asChild, int alState)
+{
+  SetEntityActive("servant_grunt_1", false);
+  PlaySoundAtEntity("", "enemy_hallucination_disappear.snt", "Player", 0, true);
+}
+void hade(string &in asParent, string &in asChild, int alState)
+{
+  StartScreenShake(0.01f, 1.0f, 4.0f,8.0f);
+  PlaySoundAtEntity("", "04_big_feet.snt", "Player", 0, true);
+  CreateParticleSystemAtEntity("FallingDust", "ps_dust_falling_door.ps", "Dust", true);
+  SetEntityActive("Walker", true);
+}
+void Locked(string &in asEntity)
+{
+  SetMessage("Sign", "Sign14", 0);
+  AddQuest("DoorLock", "memento9");
+}
+void WalkerActivate(string &in asParent, string &in asChild, int alState)
+{
+  SetEntityActive("servant_grunt_1", true);
+  AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_43", 0, "");
+  AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_44", 0, "");
+  AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_45", 0, "");
+  AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_46", 0, "");
+  AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_47", 0, "");
+  AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_48", 0, "");
+  AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_49", 0, "");
+
+}
+void CompleteQuest1(string &in asParent, string &in asChild, int alState)
+{
+  CompleteQuest("DoorLock", "memento9");
+  PlayMusic("02_puzzle.ogg", false, 1.0f, 0.5f, 5, false);
+  GiveSanityBoostSmall();
+}
+void Smash(string &in asParent, string &in asChild, int alState)
+{
+  SetPropHealth("Doorsmash", 0);
+  SetEntityActive("Brute", true);
+  AddEnemyPatrolNode("Brute", "PathNodeArea_1", 0, "");
+  AddEnemyPatrolNode("Brute", "PathNodeArea_2", 0, "");
+  AddTimer("", 3, "MonsterSpot");
+}
+void MonsterSpot(string &in asTimer)
+{
+  ShowEnemyPlayerPosition("Brute");
+}
+void InteractLadder(string &in asEntity)
+{
+  SetEntityActive("BruteActivate", true);
+  SetEntityActive("Grunt", true);
+  StartPlayerLookAt("Grunt", 2, 10, "");
+  AddTimer("", 1, "Run");
+}
+void Run(string &in asTimer)
+{
+  StopPlayerLookAt();
+  ShowEnemyPlayerPosition("Grunt");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_4", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_5", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_6", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_7", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_8", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_9", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_10", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_11", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_12", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_13", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_14", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_15", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_16", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_17", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_18", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_19", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_20", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_21", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_22", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_23", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_24", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_25", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_26", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_27", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_28", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_29", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_30", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_31", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_32", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_33", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_34", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_35", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_36", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_37", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_38", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_39", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_40", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_41", 0, "");
+  AddEnemyPatrolNode("Grunt", "PathNodeArea_42", 0, "");
+}
+void Boo(string &in asParent, string &in asChild, int alState)
+{
+  PlaySoundAtEntity("guardboo", "guardian_ontop", "Player", 2.0f, false);
+  CreateParticleSystemAtEntity("FallingDust", "ps_dust_falling_door.ps", "Rist_4", true);
+  CreateParticleSystemAtEntity("FallingDust", "ps_dust_falling_door.ps", "Rist_5", true);
+  StartScreenShake(0.03f, 1.0f, 4.0f,5.0f);
+  AddTimer("", 1.5, "Snu");
+}
+void Snu(string &in asTimer)
+{
+	StartPlayerLookAt("Rist", 1, 10, "");
+  AddTimer("", 0.7, "SnuTo");
+}
+void SnuTo(string &in asTimer)
+{
+	StartPlayerLookAt("Rist_1", 1, 10, "");
+  AddPropForce("FallBox", -0, 0, -2000, "world");
+  AddPropForce("LanternShake", -0, 500, -350, "world");
+  AddPropForce("LanternShake_1", -0, 500, -350, "world");
+  AddPropForce("LanternShake_2", -0, 500, -350, "world");
+  AddTimer("", 0.7, "SnuTre");
+}
+void SnuTre(string &in asTimer)
+{
+	StartPlayerLookAt("Rist_2", 1, 10, "");
+  AddTimer("", 0.7, "SnuFire");
+}
+void SnuFire(string &in asTimer)
+{
+	StartPlayerLookAt("Rist_3", 1, 10, "");
+  AddPropForce("FallBox_1", 0, 0, -2000, "world");
+  AddTimer("", 0.7, "SnuFem");
+}
+void SnuFem(string &in asTimer)
+{
+	StopPlayerLookAt();
+}
+//This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+  AddTimer("Musikk", 1.0f, "MusicStart");
+}
+void MusicStart(string &in asTimer)
+{
+	PlayMusic("01_amb_darkness.ogg", true, 1, 3, 1, true);
+}
+void Stille(string &in asEntity)
+{
+  StopMusic(3, 0);
+}
+//This is executed every time you leave the level. //Can be executed several times. Can be used for stopping music or ending effects.//
+void OnLeave()
+{
+
+}

@@ -12,7 +12,7 @@
 		<Entry Name="Note_Painting_Name">The Old Painting</Entry>
 		<Entry Name="Note_Painting_Text">[voice Caretaker.ogg][br]Dear Lord Gregory.[br][br][br]If you should be so unfortunate to lock yourself out of the office, the one by your old bedroom. I have arranged a way to get in.[br]If you look beyond the cave where people worship the infant you will find a way in.[br][br] However there are many caves, select the right one and the sparekey will be found.[br][br]PS: I've put the key to the Dining Hall in the bookshelf within the office.[br][br] - Caretaker Wilson.</Entry>
 		<Entry Name="Note_Clue_Name">Reflective notes on "The Shadow"</Entry>
-		<Entry Name="Note_Clue_Text">For several weeks I have been followed by something I have no other name for than the shadow.[br][br]First it consumed the cellar, and now the path to the storage has been affected aswell.[br][br]The chefs has been working on a solution, and has come up with a strong liquid able to tear down most of the shadows residue.[br]The only problem is the fact that the liquid is stored in the cellar, I have no intentions of going down there without the servants.[br][br]There is something down there, something I would never want to face alone.</Entry>
+		<Entry Name="Note_Clue_Text">For several weeks I have been followed by something I have no other name for than the shadow. First it consumed the cellar, and now the path to the storage has been affected aswell.[br][br]The alchemists have been working on a solution, and has come up with a strong liquid able to tear down most of the shadows residue.[br]The only problem is the fact that the liquid is stored in the cellar, I have no intentions of going down there without the servants.[br][br]There is something down there, something I would never want to face alone.</Entry>
 /////////////////////////////////////////////////////////////////////////////////
 //-----------------------------------Diaries-----------------------------------//
 /////////////////////////////////////////////////////////////////////////////////
@@ -31,7 +31,7 @@
 		<Entry Name="Quest_memento5_Text">Slime is blocking the way, neither hands nor tools can break it.</Entry>
 		<Entry Name="Quest_memento6_Text">There is a broken ladder in the archives. Find a way to fix it.</Entry>
 		<Entry Name="Quest_memento7_Text">The wall in the upper part of the Archives looks to be breakable, break it down.</Entry>
-		<Entry Name="Quest_memento8_Text">A note I found mentioned something about a strong liquid in the cellar being able to remove residue of something called the "Shadow". This liquid could possibly help me progess through the castle.</Entry>
+		<Entry Name="Quest_memento8_Text">A note I found mentioned something about a strong liquid in the cellar being able to remove residue of something called the "Shadow".</Entry>
 		<Entry Name="Quest_memento9_Text">The door won't budge, is there another way in?</Entry>
 	</CATEGORY>
 
@@ -46,8 +46,8 @@
 		<Entry Name="ItemDesc_key2">The key to the dining hall.</Entry>
 		<Entry Name="ItemName_key3">Cellar Key</Entry>
 		<Entry Name="ItemDesc_key3">The key to the Cellar.</Entry>
-		<Entry Name="ItemName_key4">East Wing Key</Entry>
-		<Entry Name="ItemDesc_key4">The key to the East Wing of the mansion.</Entry>
+		<Entry Name="ItemName_key4">Commons Key</Entry>
+		<Entry Name="ItemDesc_key4">The key to the Commons area.</Entry>
 		<Entry Name="ItemName_Crowbar">Crowbar</Entry>
 		<Entry Name="ItemDesc_Crowbar">Great for opening jammed doors.</Entry>
 		<Entry Name="ItemName_Hammer">Hammer</Entry>
@@ -72,12 +72,22 @@
 		<Entry Name="Sign7">"Map of Spain"</Entry>
 		<Entry Name="Sign8">"Map of Prussia""</Entry>
 		<Entry Name="Sign9">The lock is broken, A key wont work.</Entry>
-		<Entry Name="Sign10">Chapter 2 - Point of No Return</Entry>
+		<Entry Name="Sign10">"Chapter 2 - Point of No Return"</Entry>
 		<Entry Name="Sign11">The head fell off the hammer, it's no longer usable..</Entry>
 		<Entry Name="Sign12">"Study"</Entry>
 		<Entry Name="Sign13">"Local History"</Entry>
 		<Entry Name="Sign14">"It won't budge, the lock seems to be broken."</Entry>
-		<Entry Name="Sign420">"Chapter 1 - A Sticky Situation"</Entry>
+		<Entry Name="Sign15">Storage A</Entry>
+		<Entry Name="Sign16">Storage B</Entry>
+		<Entry Name="Sign17">"Most who wander into dark, desolate places alone, are rarely heard from again.""</Entry>
+		<Entry Name="Sign18">"It's know that individuals with a fear of the dark quickly abandones all hope."</Entry>
+		<Entry Name="Sign19">"Hope can be found at the darkest hour, if one simply turns on the light."</Entry>
+		<Entry Name="Sign20">"The greatest loss of life is what dies inside us while we live"</Entry>
+		<Entry Name="Sign21">"Do the thing you fear most and the death of fear is certain."</Entry>
+		<Entry Name="Sign22">"Order of the mind is the key to victory"</Entry>
+		<Entry Name="Sign23">"Without order, you are lost."</Entry>
+		<Entry Name="Sign24">"There can be no order without chaos."</Entry>
+		<Entry Name="Sign25">"Chapter 1 - A Sticky Situation"</Entry>
 
 
 	</CATEGORY>
@@ -96,19 +106,17 @@
 
 	<CATEGORY Name="Levels">
 		<Entry Name="Storage">Storage</Entry>
+		<Entry Name="Back Hall">Back Hall</Entry>
 		<Entry Name="Mansion West Wing">Mansion West Wing</Entry>
 		<Entry Name="Entrance Hall">Entrance Hall</Entry>
 		<Entry Name="Cellar">Cellar</Entry>
 		<Entry Name="Storage B">Storage B</Entry>
-		<Entry Name="Triclinium">Triclinium</Entry>
-		<Entry Name="Triclinium">Triclinium</Entry>
-		<Entry Name="Triclinium">Triclinium</Entry>
-		<Entry Name="Triclinium">Triclinium</Entry>
 		<Entry Name="HiddenLib">Hidden Library</Entry>
 		<Entry Name="Study">Study</Entry>
 		<Entry Name="Nytt">Cellar</Entry>
 		<Entry Name="Cellar">Cellar</Entry>
 		<Entry Name="Mansion East Wing">Mansion East Wing</Entry>
+		<Entry Name="Mansion East Wing"></Entry>
 
 	</CATEGORY>
 

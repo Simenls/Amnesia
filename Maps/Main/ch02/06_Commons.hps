@@ -1,0 +1,29 @@
+//This is only executed when the map is loaded for the first time.
+//Only happens once. Can be used for adding effects and callbacks that should not repeat.//
+void OnStart()
+
+{
+
+}
+
+//This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+  AddTimer("Musikk", 1.0f, "MusicStart");
+}
+void MusicStart(string &in asTimer)
+{
+	PlayMusic("09_amb_safe.ogg", true, 1, 3, 1, true);
+}
+void Stille(string &in asEntity)
+{
+  StopMusic(3, 0);
+}
+
+
+
+//This is executed every time you leave the level. //Can be executed several times. Can be used for stopping music or ending effects.//
+void OnLeave()
+{
+
+}

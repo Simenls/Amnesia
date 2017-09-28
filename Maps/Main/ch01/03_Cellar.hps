@@ -1,0 +1,228 @@
+//This is only executed when the map is loaded for the first time. //Only happens once. Can be used for adding effects and callbacks that should not repeat.//
+void OnStart()
+
+{
+  CreateParticleSystemAtEntity("VannVegg", "ps_childsnake_water_stream.ps", "VannFraVeggen", true);
+  SetEntityPlayerInteractCallback("Crowbar", "InteractCrowbar", true);
+  AddEntityCollideCallback("Player", "FallBox", "Boksefjes", true, 1);
+  AddEntityCollideCallback("Player", "NoDust", "DustRemove", true, 1);
+  AddEntityCollideCallback("Player", "Skummelt", "FadeOut", true, 1);
+  AddEntityCollideCallback("Player", "lurkerspawn", "Plask", true, 1);
+  AddEntityCollideCallback("Player", "PushDoor", "Knirk", true, 1);
+  AddUseItemCallback("", "crowbar_1", "castle_5", "UsedCrowbarOnDoor", true);
+AddEntityCollideCallback("crowbar_joint_1", "ScriptArea_1", "CollideAreaBreakDoor", true, 1);
+}
+void Boksefjes(string &in asParent, string &in asChild, int alState)
+{
+  StartScreenShake(0.03f, 1.0f, 4.0f,8.0f);
+  PlaySoundAtEntity("guardboo", "guardian_activated", "Player", 2.0f, false);
+  CreateParticleSystemAtEntity("FallingDust", "ps_dust_falling_door.ps", "Dust", true);
+  CreateParticleSystemAtEntity("PSGhostWind", "ps_dust_whirl.ps", "AreaGhostWind", false);
+  CreateParticleSystemAtEntity("PSGhostWind", "ps_dust_whirl.ps", "AreaGhostWind_1", false);
+  CreateParticleSystemAtEntity("PSGhostWind", "ps_dust_whirl.ps", "AreaGhostWind_2", false);
+  CreateParticleSystemAtEntity("PSGhostWind", "ps_dust_whirl.ps", "AreaGhostWind_3", false);
+  CreateParticleSystemAtEntity("PSGhostWind", "ps_dust_whirl.ps", "AreaGhostWind_4", false);
+  CreateParticleSystemAtEntity("PSGhostWind", "ps_dust_whirl.ps", "AreaGhostWind_5", false);
+  PlaySoundAtEntity("whirly", "general_wind_whirl2.snt", "Player", 4, false);
+  AddTimer("", 2.5, "Snu");
+}
+void DustRemove(string &in asParent, string &in asChild, int alState)
+{
+  DestroyParticleSystem("ps_dust_falling_door.ps");
+  DestroyParticleSystem("ps_dust_whirl.ps");
+}
+void Plask(string &in asParent, string &in asChild, int alState)
+{
+  StartPlayerLookAt("Smash", 1, 10, "");
+  AddTimer("", 4.0, "Vannplask");
+}
+
+void Vannplask(string &in asTimer)
+{
+  StopPlayerLookAt();
+  SetPropHealth("castle_3", 0);
+  SetEntityActive("Lurker", true);
+  ShowEnemyPlayerPosition("Lurker");
+}
+
+void FadeOut(string &in asParent, string &in asChild, int alState)
+{
+  FadeOut(0.3);
+
+	AddTimer("scare", 0.3f, "TimerPlayerReact");
+	AddTimer("breath", 2.0f, "TimerPlayerReact");
+	AddTimer("breathl", 4.0f, "TimerPlayerReact");
+	AddTimer("breathl", 6.0f, "TimerPlayerReact");
+
+	AddTimer("TeleportHowl", 0.5f, "TimerTeleportHowl");
+	AddTimer("TeleportDone", 3.5f, "TimerTelportDone");
+
+	PlaySoundAtEntity("stomp","scare_wall_stomp","Player", 0, false);
+	PlaySoundAtEntity("darkamb","07_amb_breath","Player", 5, false);
+	PlaySoundAtEntity("wateramb", "ambience_water_no3d.snt", "sound_idle_1", 5, true);
+
+	FadePlayerFOVMulTo(4.0f, 4.0f);
+	SetRadialBlurStartDist(0.1f);
+	FadeRadialBlurTo(1.0f, 5.0f);
+
+	StartEffectFlash(0.2, 0.1,0.3);
+
+	FadeGlobalSoundVolume(0, 0.3);
+	StopMusic(0.3f, 0);
+	StartScreenShake(0.1, 4.7, 0.05, 0.5);
+
+	FadePlayerFOVMulTo(0.5, 3);
+}
+void TimerTeleportHowl(string &in asTimer)
+{
+	PlaySoundAtEntity("howl","guardian_activated.snt","Player", 0, false);
+	SetPlayerActive(false);
+}
+
+void TimerTelportDone(string &in asTimer)
+{
+	TeleportPlayer("PlayerStartArea_2");
+	FadeGlobalSoundVolume(1,2);
+	SetPlayerActive(true);
+	FadePlayerFOVMulTo(1.0f, 0.5f);
+	FadeRadialBlurTo(0.0f, 1.0f);
+	FadeIn(1.3);
+
+	FadePlayerFOVMulTo(1, 1);
+}
+
+
+void InteractCrowbar(string &in asEntity)
+{
+	SetEntityActive("skummelt", true);
+  SetEntityActive("lurkerspawn", true);
+}
+
+void Snu(string &in asTimer)
+{
+	AddPropForce("box", 2000, 0, 0, "world");
+  AddPropForce("box_1", 2000, 0, 0, "world");
+  AddPropForce("box_2", 2000, 0, 0, "world");
+  AddPropForce("box_3", -2000, 0, 0, "world");
+  AddPropForce("box_4", -2000, 0, 0, "world");
+  PlaySoundAtEntity("scare", "react_scare.snt", "Player", 0.6f, false);
+}
+void UsedCrowbarOnDoor(string &in asItem, string &in asEntity)
+ {
+ AddTimer("", 0.2, "TimerSwitchShovel");
+ RemoveItem("crowbar_1");
+ }
+
+
+void TimerSwitchShovel(string &in asTimer)
+ {
+ PlaySoundAtEntity("","puzzle_place_jar.snt", "", 0, false);
+ SetEntityActive("crowbar_joint_1", true);
+ }
+
+ void Knirk(string &in asParent, string &in asChild, int alState)
+ {
+ 	SetSwingDoorClosed("door_gallery", false, false);
+ 	SetSwingDoorDisableAutoClose("door_gallery", true);
+
+ 	PlaySoundAtEntity("creaking_door", "joint_door_move_special.snt", "door_gallery", 1.0 / 0.7f, false);
+
+ 	AddTimer("door_gallery", 0.01f, "TimerSwingDoor");
+
+ 	AddDebugMessage("Boho, the gallery door creaks open.", false);
+
+ 	AddTimer("stopcreak", 2.0f, "TimerStopCreak");
+ }
+ void TimerSwingDoor(string &in asTimer)
+ {
+ 	if(GetLocalVarInt("SwingDoor") == 10){
+ 		SetLocalVarInt("SwingDoor", 0);
+ 		return;
+ 	}
+
+ 	if(asTimer == "door_gallery") AddPropForce(asTimer, -70.0f, 0, 0, "World");
+ 	else AddPropForce(asTimer, -95.0f, 0, 0, "World");
+
+ 	AddLocalVarInt("SwingDoor", 1);
+
+ 	AddTimer(asTimer, 0.03f, "TimerSwingDoor");
+
+ 	AddDebugMessage("Swing: "+GetLocalVarInt("SwingDoor"), false);
+ }
+ void TimerStopCreak(string &in asTimer)
+ {
+ 	if(asTimer == "scare2"){
+ 		PlaySoundAtEntity("scare", "react_scare.snt", "Player", 1.0 / 1, false);
+ 		return;
+ 	}
+ 	if(asTimer == "scare"){
+ 		PlaySoundAtEntity("scare", "react_scare.snt", "Player", 0, false);
+ 		//PlaySoundAtEntity("laugh", "00_laugh.snt", "door_gallery", 1.0 / 1, false);
+ 		PlaySoundAtEntity("loop", "00_loop.snt", "Player", 1.0 / 0.1f, false);
+ 		return;
+ 	}
+ 	if(asTimer == "breath1"){
+ 		PlaySoundAtEntity("breath", "react_breath.snt", "Player", 1.0 / 1, false);
+ 		return;
+ 	}
+ 	if(asTimer == "breath2"){
+ 		PlaySoundAtEntity("breath", "react_breath.snt", "Player", 1.0 / 0.9f, false);
+ 		return;
+ 	}
+ 	if(asTimer == "breath3"){
+ 		//SetSwingDoorLocked("door_gallery", false, true);
+ 		PlaySoundAtEntity("breath", "react_breath.snt", "Player", 1.0 / 0.8f, false);
+ 		AddTimer("lookloop", RandFloat(2.0f,3.0f), "TimerRandomLook");	//Re-activate the spinning head
+ 		FadePlayerFOVMulTo(1.0f, 0.1f);
+ 		StopSound("loop", 1);
+ 		StartScreenShake(0.01f,0.25f, 0.01f,0.5f);
+ 		return;
+ 	}
+ 	if(asTimer == "lightsout"){
+ 		SetLampLit("chandelier_nice_1", false, true);
+ 		SetLampLit("candlestick_floor_2", false, true);
+ 		FadeLightTo("PointLight_25", 0, 0, 0, 0, 0, 1);
+ 		FadePlayerFOVMulTo(1.5f, 0.25f);
+ 		return;
+ 	}
+
+ 	if(asTimer == "sanity"){
+ 		//SetSwingDoorLocked("door_gallery", true, false);
+ 		GiveSanityDamage(10, true);
+ 		return;
+ 	}
+
+ 	StopSound("creaking_door", 0.4f);
+ }
+void CollideAreaBreakDoor(string &in asParent, string &in asChild, int alState)
+ {
+ AddPlayerSanity(25);
+ SetSwingDoorLocked("castle_5", false, true);
+ AddPropImpulse("castle_5", 0, 0, -50, "World");
+ SetSwingDoorDisableAutoClose("castle_5", true);
+ SetSwingDoorClosed("castle_5", false, false);
+ SetMoveObjectState("castle_5", 1);
+ PlaySoundAtEntity("","break_wood_metal", "AreaBreakEffect", 0, false);
+ CreateParticleSystemAtEntity("", "ps_hit_wood", "AreaBreakEffect", false);
+ SetEntityActive("crowbar_joint_1", false);
+ SetLocalVarInt("Door", 1);
+ }
+//This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+  AddTimer("Musikk", 1.0f, "MusicStart");
+}
+void MusicStart(string &in asTimer)
+{
+	PlayMusic("06_amb.ogg", true, 1, 3, 1, true);
+}
+void Stille(string &in asEntity)
+{
+  StopMusic(3, 0);
+}
+
+//This is executed every time you leave the level. //Can be executed several times. Can be used for stopping music or ending effects.//
+void OnLeave()
+{
+
+}

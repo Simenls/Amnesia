@@ -1,0 +1,125 @@
+//This is only executed when the map is loaded for the first time.
+//Only happens once. Can be used for adding effects and callbacks that should not repeat.//
+void OnStart()
+
+{
+    AddTimer("tmrIntro", 0.0f, "introSequence");
+}
+void introSequence(string &in asTimer)
+{
+  FadeOut(0.0f);
+  SetPlayerActive(false);
+  PlayMusic("Intro", false, 1.0f, 1.0f, 0, false);
+  SetSanityDrainDisabled(true);
+  AddTimer("TP", 5.0f, "Tekst");
+}
+void Tekst(string &in asTimer)
+{
+  SetMessage("Sign", "Sign17", 6);
+  AddTimer("TP", 10.0f, "Tekst1");
+}
+void Tekst1(string &in asTimer)
+{
+  SetMessage("Sign", "Sign18", 6);
+  AddTimer("TP", 10.0f, "Tekst2");
+}
+void Tekst2(string &in asTimer)
+{
+  FadeIn(2);
+  TeleportPlayer("PlayerStartArea_2");
+  AddTimer("TP",10.0f, "Tekst3");
+  AddTimer("TP", 8.0f, "Fade");
+}
+void Fade(string &in asTimer)
+{
+  FadeOut(0.0f);
+}
+void Tekst3(string &in asTimer)
+{
+  SetMessage("Sign", "Sign19", 6);
+  AddTimer("TP", 10.0f, "Tekst4");
+}
+void Tekst4(string &in asTimer)
+{
+  SetMessage("Sign", "Sign20", 6);
+  AddTimer("TP", 10.0f, "Tekst5");
+}
+void Tekst5(string &in asTimer)
+{
+  FadeIn(2);
+  TeleportPlayer("PlayerStartArea_3");
+  AddTimer("TP", 10.0f, "Tekst6");
+  AddTimer("TP", 8.0f, "Fade2");
+  AddTimer("TP", 2.0f, "LookSide");
+}
+void LookSide(string &in asTimer)
+{
+  StartPlayerLookAt("Sehit_1", 0.8, 10, "");
+}
+void Fade2(string &in asTimer)
+{
+  StopPlayerLookAt();
+  FadeOut(0.0f);
+}
+void Tekst6(string &in asTimer)
+{
+  SetMessage("Sign", "Sign21", 6);
+  AddTimer("TP", 10.0f, "Tekst7");
+}
+void Tekst7(string &in asTimer)
+{
+  SetMessage("Sign", "Sign22", 6);
+  AddTimer("TP", 10.0f, "Tekst8");
+}
+void Tekst8(string &in asTimer)
+{
+  FadeIn(2);
+  TeleportPlayer("PlayerStartArea_4");
+  AddTimer("TP", 10.0f, "Tekst9");
+  AddTimer("TP", 8.0f, "Fade3");
+  AddTimer("TP", 2.0f, "LookUp");
+}
+void LookUp(string &in asTimer)
+{
+  StartPlayerLookAt("Sehit", 0.8, 10, "");
+}
+void Fade3(string &in asTimer)
+{
+  FadeOut(0.0f);
+  StopPlayerLookAt();
+}
+void Tekst9(string &in asTimer)
+{
+  SetMessage("Sign", "Sign23", 6);
+  AddTimer("TP", 10.0f, "Tekst10");
+}
+void Tekst10(string &in asTimer)
+{
+  SetMessage("Sign", "Sign24", 6);
+  AddTimer("TP", 5.0f, "Tekst11");
+}
+void Tekst11(string &in asTimer)
+{
+  FadeIn(2);
+  TeleportPlayer("PlayerStartArea_5");
+  AddTimer("TP", 2.0f, "FreeToGo");
+}
+void FreeToGo(string &in asTimer)
+{
+  ChangeMap("01_Entrance Hall.map", "PlayerStartArea_1", "door_large_castle_open.ogg", "door_level_wood_close.ogg");
+  StopMusic(3, 0);
+}
+//This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+
+}
+
+
+
+
+//This is executed every time you leave the level. //Can be executed several times. Can be used for stopping music or ending effects.//
+void OnLeave()
+{
+
+}
