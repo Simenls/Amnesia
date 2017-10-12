@@ -3,19 +3,25 @@
 void OnStart()
 {
   CreateParticleSystemAtEntity("FountainPourWater", "ps_childsnake_water_stream.ps", "AreaFountainWater", true);
-  AddTimer("tmrIntro", 0.0f, "Intro");
+  AddTimer("tmrIntro", 0.5f, "Intro");
+  AddTimer("tmrNote", 0.0f, "Note");
 }
-
 void Intro(string &in asTimer)
 {
   SetPlayerActive(true);
   SetSanityDrainDisabled(false);
   AddTimer("tmrIntro", 2.0f, "Music");
 }
+void Note(string &in asTimer)
+{
+  AddNote("Warrant", "");
+  AddQuest("", "memento10");
+}
 void Music(string &in asTimer)
 {
   PlayMusic("02_amb_safe", true, 1.0f, 5.0f, 0, false);
   SetMessage("Sign", "Sign25", 6);
+  CompleteQuest("", "memento10");
 }
 
 void InteractLargeGate(string &in asEntity)

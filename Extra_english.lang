@@ -1,6 +1,6 @@
 <LANGUAGE>
 	<CATEGORY Name="CustomStoryMain">
-		<Entry Name="Description">Anually Lord Gregory hosts his dinner party, a most popular event for the people of the city of Chichester in England.[br][br]You had been invited to Gregory's mansion to celebrate his mistress' birthday, but decided not to go. Every time Gregory hosts his dinner, people dissapear and are never seen again.[br][br]As a local investigator you have been sent to figure out what is going on at Gregory's mansion.[br][br]What has happend to the population of Chichester? Is Gregory a lunatic or is there something else afoot?</Entry>
+		<Entry Name="Description">Gretu story, i prømis</Entry>
 	</CATEGORY>
 
 	<CATEGORY Name="Journal">
@@ -9,10 +9,14 @@
 //------------------------------------Notes------------------------------------//
 /////////////////////////////////////////////////////////////////////////////////
 
-		<Entry Name="Note_Painting_Name">The Old Painting</Entry>
-		<Entry Name="Note_Painting_Text">[voice Caretaker.ogg][br]Dear Lord Gregory.[br][br][br]If you should be so unfortunate to lock yourself out of the office, the one by your old bedroom. I have arranged a way to get in.[br]If you look beyond the cave where people worship the infant you will find a way in.[br][br] However there are many caves, select the right one and the sparekey will be found.[br][br]PS: I've put the key to the Dining Hall in the bookshelf within the office.[br][br] - Caretaker Wilson.</Entry>
-		<Entry Name="Note_Clue_Name">Reflective notes on "The Shadow"</Entry>
-		<Entry Name="Note_Clue_Text">For several weeks I have been followed by something I have no other name for than the shadow. First it consumed the cellar, and now the path to the storage has been affected aswell.[br][br]The alchemists have been working on a solution, and has come up with a strong liquid able to tear down most of the shadows residue.[br]The only problem is the fact that the liquid is stored in the cellar, I have no intentions of going down there without the servants.[br][br]There is something down there, something I would never want to face alone.</Entry>
+		<Entry Name="Note_Warrant_Name">Warrant</Entry>
+		<Entry Name="Note_Warrant_Text">Warrant from the "" police department regarding the castle of "". After the mysterious dissaperings in "" the local investigators has signed a warrant to search ""</Entry>
+		<Entry Name="Note_Restoration_Name">"Restoration" (1/2)</Entry>
+		<Entry Name="Note_Restoration_Text">4th of March 1755[br][br]Much of the castle is weakening by the minute. The servants have been working on the restoration of the west wing of the castle for months. Much has been fixed, but some things still tending to. The guest rooms has had a cave-in and will not be possible to inhabit for the coming weeks.[br][br]The lever ment to be in the old study fell off and broke the other day, so a new one has been crafted and is now ready for use.</Entry>
+		<Entry Name="Note_RestorationSecond_Name">"Restoration" (2/2)</Entry>
+		<Entry Name="Note_RestorationSecond_Text">12th of March 1755[br][br]While the restoration of most of the west wing has gone as planned, the cellar and the passage to the storage has proved to be a more daunting and challenging task. It's like the castle has a life of it's own, the darkness arrived little by little, consuming anything in it's path.[br][br]The alchemists was set to work on a soultion for all the tissue left by the darkness, they managed to brew up a concoction strong enough to rip right through the human skin. If handeled with care, this might be the first step to removing the darkness' residue.</Entry>
+		<Entry Name="Note_Barnes_Name">"Investigative notes" - John Barnes (1/3)</Entry>
+		<Entry Name="Note_Barnes_Text">17th of August 1755[br][br]I arrived by horse at the town of Walford late in the evening. My supperior, the sherriff - Neal Woods, told me he had great news for me. The town of Walford had over a period of time had regular dissaperances, and I was to be appointed head investigator of the case. At first I was not sure quite what to make of the so-called "good news", but then I realised how great of an opportunity it would be for me if I could solve it.[br][br]One could almost say I was glad at the time for being assigned such a difficult and notorious case. Now however I do not know what I feel, I've traveled far from home, far from familiar territory. In the morning I will meet with Thomas Middleton, the local investigator, he is to assist me during the investigation. Little do I know about the town of Walford, my investigations will start tomorrow. </Entry>
 /////////////////////////////////////////////////////////////////////////////////
 //-----------------------------------Diaries-----------------------------------//
 /////////////////////////////////////////////////////////////////////////////////
@@ -23,16 +27,13 @@
 /////////////////////////////////////////////////////////////////////////////////
 //-----------------------------------Mementos----------------------------------//
 /////////////////////////////////////////////////////////////////////////////////
-
-		<Entry Name="Quest_memento1_Text">The door to the office is locked. Maybe there is a key somewhere.</Entry>
-		<Entry Name="Quest_memento2_Text">The door to the dining hall seems locked, is there a key to the door?</Entry>
-		<Entry Name="Quest_memento3_Text">There seems to be another room behind the bookshelf in the study. Is there a way in?</Entry>
+		<Entry Name="Quest_memento3_Text">There seems to be another room behind the bookshelf in the study. Is there a way to get inside?</Entry>
 		<Entry Name="Quest_memento4_Text">The door to the cellar is locked. A key is needed.</Entry>
-		<Entry Name="Quest_memento5_Text">Slime is blocking the way, neither hands nor tools can break it.</Entry>
+		<Entry Name="Quest_memento5_Text">Slime is blocking the path in the storage passage, neither hands nor tools can break it.</Entry>
 		<Entry Name="Quest_memento6_Text">There is a broken ladder in the archives. Find a way to fix it.</Entry>
-		<Entry Name="Quest_memento7_Text">The wall in the upper part of the Archives looks to be breakable, break it down.</Entry>
-		<Entry Name="Quest_memento8_Text">A note I found mentioned something about a strong liquid in the cellar being able to remove residue of something called the "Shadow".</Entry>
+		<Entry Name="Quest_memento8_Text">A note I found mentioned something about a strong liquid in the cellar being able to remove the residue left by the consuming darkness".</Entry>
 		<Entry Name="Quest_memento9_Text">The door won't budge, is there another way in?</Entry>
+		<Entry Name="Quest_memento10_Text">I was given a warrant by Inspector Barnes when I visited his office in Walford.</Entry>
 	</CATEGORY>
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -40,14 +41,10 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 	<CATEGORY Name="Inventory">
-		<Entry Name="ItemName_key1">Office Key</Entry>
-		<Entry Name="ItemDesc_key1">The key to the old office.</Entry>
-		<Entry Name="ItemName_key2">Dining Hall Key</Entry>
-		<Entry Name="ItemDesc_key2">The key to the dining hall.</Entry>
 		<Entry Name="ItemName_key3">Cellar Key</Entry>
 		<Entry Name="ItemDesc_key3">The key to the Cellar.</Entry>
 		<Entry Name="ItemName_key4">Commons Key</Entry>
-		<Entry Name="ItemDesc_key4">The key to the Commons area.</Entry>
+		<Entry Name="ItemDesc_key4">The key to the Commons.</Entry>
 		<Entry Name="ItemName_Crowbar">Crowbar</Entry>
 		<Entry Name="ItemDesc_Crowbar">Great for opening jammed doors.</Entry>
 		<Entry Name="ItemName_Hammer">Hammer</Entry>
@@ -63,41 +60,42 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 	<CATEGORY Name="Sign">
-		<Entry Name="Sign1">"Office"</Entry>
-		<Entry Name="Sign2">"Guest rooms"</Entry>
+		<Entry Name="Sign1">"Old Office Quarters"</Entry>
+		<Entry Name="Sign2">"Guest Quarters"</Entry>
 		<Entry Name="Sign3">"Cellar"</Entry>
 		<Entry Name="Sign4">There seems to be another room behind the bookshelf.</Entry>
-		<Entry Name="Sign5">The door is locked. A key is needed.</Entry>
 		<Entry Name="Sign6">The door is locked. A key is needed.</Entry>
 		<Entry Name="Sign7">"Map of Spain"</Entry>
 		<Entry Name="Sign8">"Map of Prussia""</Entry>
 		<Entry Name="Sign9">The lock is broken, A key wont work.</Entry>
 		<Entry Name="Sign10">"Chapter 2 - Point of No Return"</Entry>
 		<Entry Name="Sign11">The head fell off the hammer, it's no longer usable..</Entry>
-		<Entry Name="Sign12">"Study"</Entry>
+		<Entry Name="Sign12">"Old Study"</Entry>
 		<Entry Name="Sign13">"Local History"</Entry>
 		<Entry Name="Sign14">"It won't budge, the lock seems to be broken."</Entry>
-		<Entry Name="Sign15">Storage A</Entry>
-		<Entry Name="Sign16">Storage B</Entry>
-		<Entry Name="Sign17">"Most who wander into dark, desolate places alone, are rarely heard from again.""</Entry>
-		<Entry Name="Sign18">"It's know that individuals with a fear of the dark quickly abandones all hope."</Entry>
+		<Entry Name="Sign15">Storage B</Entry>
+		<Entry Name="Sign16">Storage A</Entry>
+		<Entry Name="Sign17">"Most who wander into dark, desolate places alone, are rarely heard from again."</Entry>
+		<Entry Name="Sign18">"It's known that individuals with a fear of the dark quickly abandones all hope."</Entry>
 		<Entry Name="Sign19">"Hope can be found at the darkest hour, if one simply turns on the light."</Entry>
-		<Entry Name="Sign20">"The greatest loss of life is what dies inside us while we live"</Entry>
+		<Entry Name="Sign20">"However, stricken by fear most people tend to not be able to act."</Entry>
 		<Entry Name="Sign21">"Do the thing you fear most and the death of fear is certain."</Entry>
 		<Entry Name="Sign22">"Order of the mind is the key to victory"</Entry>
 		<Entry Name="Sign23">"Without order, you are lost."</Entry>
 		<Entry Name="Sign24">"There can be no order without chaos."</Entry>
 		<Entry Name="Sign25">"Chapter 1 - A Sticky Situation"</Entry>
+		<Entry Name="Sign26">It won't budge.</Entry>
+		<Entry Name="Sign27">There is no way I'm getting back that way.</Entry>
+		<Entry Name="Sign28">The door seems to be locked with some sort of mechanism.</Entry>
+		<Entry Name="Sign29">"Laboratory"</Entry>
 
 
 	</CATEGORY>
-
 /////////////////////////////////////////////////////////////////////////////////
 //------------------------------------Flashback--------------------------------//
 /////////////////////////////////////////////////////////////////////////////////
 
 	<CATEGORY Name="Flashback">
-		<Entry Name="crowd.ogg"></Entry>
 	</CATEGORY>
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -105,19 +103,13 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 	<CATEGORY Name="Levels">
-		<Entry Name="Storage">Storage</Entry>
-		<Entry Name="Back Hall">Back Hall</Entry>
-		<Entry Name="Mansion West Wing">Mansion West Wing</Entry>
 		<Entry Name="Entrance Hall">Entrance Hall</Entry>
+		<Entry Name="West Wing">West Wing</Entry>
+		<Entry Name="Storage Passage">Storage Passage</Entry>
 		<Entry Name="Cellar">Cellar</Entry>
 		<Entry Name="Storage B">Storage B</Entry>
-		<Entry Name="HiddenLib">Hidden Library</Entry>
-		<Entry Name="Study">Study</Entry>
-		<Entry Name="Nytt">Cellar</Entry>
-		<Entry Name="Cellar">Cellar</Entry>
-		<Entry Name="Mansion East Wing">Mansion East Wing</Entry>
-		<Entry Name="Mansion East Wing"></Entry>
-
+		<Entry Name="Commons">Commons</Entry>
+		<Entry Name="East Wing">East Wing</Entry>
 	</CATEGORY>
 
 /////////////////////////////////////////////////////////////////////////////////

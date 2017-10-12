@@ -1,11 +1,11 @@
 <Level>
     <EditorSession>
         <Performance CamClipPlanes="0.05 1000" LightsActive="true" PSActive="true" ShowFog="true" ShowSkybox="true" WorldReflection="true" />
-        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="false" GPointLight="false" GridSnap="true" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
+        <ViewportConfig BGColor="0.2 0.2 0.2 1" GAmbientLight="false" GPointLight="false" GridSnap="false" GridSnapSeparation="0.25" SelectedViewport="3" UsingEnlargedViewport="true">
             <Viewport CameraPosition="0 0 170.572" CameraTarget="0 0 -9.4277" CameraZoom="0" GridHeight="-9.4277" GridPlane="2" Preset="0" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="161.149 0 0" CameraTarget="-18.8506 0 0" CameraZoom="0" GridHeight="-18.8506" GridPlane="0" Preset="1" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
             <Viewport CameraPosition="0 180.484 0" CameraTarget="0 0.483695 0" CameraZoom="0" GridHeight="0.483695" GridPlane="1" Preset="2" RenderMode="1" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
-            <Viewport CameraPosition="-11.0035 19.3702 35.24" CameraTarget="22.5053 1.73401 67.8916" CameraZoom="0" GridHeight="1.734" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
+            <Viewport CameraPosition="-11.8116 5.50441 40.7546" CameraTarget="4.03046 1.734 88.0284" CameraZoom="0" GridHeight="1.734" GridPlane="1" Preset="3" RenderMode="0" ShowAxes="true" ShowGrid="true" UsingLTCam="true" />
         </ViewportConfig>
         <Groups>
             <Group ID="0" Name="None" Visible="true" />
@@ -549,7 +549,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <FogArea Active="true" Color="1 1 1 1" End="10" FalloffExp="1" Group="0" ID="114" Name="FogArea_1" Rotation="-0.43885 -1.553 -2.70366" Scale="-4.75 16.5 21.5" ShownBacksideWhenInside="true" ShownBacksideWhenOutside="false" Start="0" Tag="" WorldPos="-11 13.25 75.5" />
+                <FogArea Active="true" Color="1 1 1 1" End="10" FalloffExp="1" Group="0" ID="114" Name="FogArea_1" Rotation="-0.43885 -1.553 -2.70366" Scale="-4.75 16.5 21.5" ShownBacksideWhenInside="true" ShownBacksideWhenOutside="false" Start="0" Tag="" WorldPos="-11 13.8974 75.5" />
                 <Entity Active="true" FileIndex="4" Group="0" ID="171" Name="elevator_door_1" Rotation="0 -1.5708 0" Scale="1.25 1 1" Tag="" WorldPos="28 2 40.25">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
@@ -1359,7 +1359,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="12" Group="0" ID="469" Name="block_box_7" Rotation="3.14159 -1.5708 3.14159" Scale="2.09834 1.2 0.556034" Tag="" WorldPos="-16.1912 2.60697 40.8894">
+                <Entity Active="true" FileIndex="12" Group="0" ID="469" Name="block_box_7" Rotation="-2.53518e-006 -1.5708 -2.53518e-006" Scale="2.09834 1.2 0.556034" Tag="" WorldPos="-16.1912 2.60697 40.8894">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -1378,7 +1378,7 @@
                         <Var Name="VisionMaxSanity" Value="30" />
                     </UserVariables>
                 </Entity>
-                <Entity Active="true" FileIndex="12" Group="0" ID="470" Name="block_box_8" Rotation="3.14159 -1.5708 3.14159" Scale="2.09834 1 0.556034" Tag="" WorldPos="-15.5833 2.50674 40.8894">
+                <Entity Active="true" FileIndex="12" Group="0" ID="470" Name="block_box_8" Rotation="-2.53518e-006 -1.5708 -2.53518e-006" Scale="2.09834 1 0.556034" Tag="" WorldPos="-15.5833 2.50674 40.8894">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />
                         <Var Name="StaticPhysics" Value="false" />
@@ -2020,7 +2020,7 @@
                 <Area Active="true" AreaType="PlayerStart" Group="0" ID="525" Mesh="" Name="PlayerStartArea_5" Rotation="0 -0.00219303 -4.76837e-006" Scale="1 0.5 1.75" Tag="" WorldPos="-12.7397 2 68.8625">
                     <UserVariables />
                 </Area>
-                <FogArea Active="true" Color="1 1 1 1" End="10" FalloffExp="1" Group="0" ID="621" Name="FogArea_2" Rotation="-3.12603 -1.06326 -0.0144535" Scale="-4.75 16.5 21.5" ShownBacksideWhenInside="true" ShownBacksideWhenOutside="false" Start="0" Tag="" WorldPos="12.25 16.75 72" />
+                <FogArea Active="true" Color="1 1 1 1" End="10" FalloffExp="1" Group="0" ID="621" Name="FogArea_2" Rotation="-3.12603 -1.06326 -0.0144535" Scale="-4.75 16.5 21.5" ShownBacksideWhenInside="true" ShownBacksideWhenOutside="false" Start="0" Tag="" WorldPos="12.7345 18.1614 72" />
                 <Entity Active="true" FileIndex="5" Group="0" ID="704" Name="torch_static01_5" Rotation="-3.14159 -0.410217 -3.14159" Scale="1 1 1" Tag="" WorldPos="4.50548 17.7535 72.026">
                     <UserVariables>
                         <Var Name="CastShadows" Value="true" />

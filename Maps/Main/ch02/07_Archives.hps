@@ -11,6 +11,12 @@ void OnStart()
   AddEntityCollideCallback("Player", "Spin", "SpinSpin", true, 1);
   AddEntityCollideCallback("Player", "Trapped", "Pound", true, 1);
 }
+//Note Music Pickup
+void PickNoteToSelf(string &in entity, string &in type)
+{
+	PlayMusic("23_paper_alexander.ogg", false, 0.7f, 0, 10, false);
+  SetEntityActive("Trapped", true);
+}
 void StigeComplete(string &in asItem, string &in asEntity)
 {
   RemoveItem(asItem);
@@ -126,6 +132,7 @@ void StartPound(string &in asTimer)
   PlayMusic("15_event_prisoner.ogg", false, 1, 4, 1, true);
   StartScreenShake(0.01f, 1.0f, 4.0f,8.0f);
   AddTimer("", 0.2, "PoundStart");
+  AddTimer("", 15, "MusicAfterPound");
 }
 void PoundStart(string &in asTimer)
 {
@@ -145,20 +152,42 @@ void PoundStart(string &in asTimer)
       }
     }
 }
+void MusicAfterPound(string &in asTimer)
+{
+    PlayMusic("29_amb.ogg", true, 1, 4, 1, true);
+    SetLampLit("Torch", false, true);
+    SetLampLit("Torch2", false, true);
+    SetLampLit("Torch3", false, true);
+    SetLampLit("Torch4", false, true);
+    SetLampLit("Torch5", false, true);
+    SetLampLit("Torch6", false, true);
+    SetLampLit("Torch7", false, true);
+    SetLampLit("Torch8", false, true);
+    SetLampLit("Torch9", false, true);
+    SetLampLit("Torch10", false, true);
+    SetLampLit("Torch11", false, true);
+    SetLampLit("Torch12", false, true);
+    SetLampLit("Torch13", false, true);
+    SetLampLit("Torch14", false, true);
+    SetLampLit("Torch15", false, true);
+    SetLampLit("Torch16", false, true);
 
+
+}
 //This is executed every time you enter the level. //Can be executed several times. Can be used for playing music and adding checks.//
 void OnEnter()
 {
-  AddEntityCollideCallback("Player", "Lyd", "Trall", true, 1);
+  AddTimer("Musikk", 1.0f, "MusicStart");
 }
-void Trall(string &in asParent, string &in asChild, int alState)
+void MusicStart(string &in asTimer)
 {
-  PlayMusic("18_amb.ogg", true, 1, 2, 1, true);
+	PlayMusic("18_amb.ogg", true, 1, 3, 1, true);
 }
 void Stille(string &in asEntity)
 {
   StopMusic(3, 1);
 }
+
 //This is executed every time you leave the level. //Can be executed several times. Can be used for stopping music or ending effects.//
 void OnLeave()
 {

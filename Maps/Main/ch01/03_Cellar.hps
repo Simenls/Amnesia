@@ -2,15 +2,27 @@
 void OnStart()
 
 {
+  ConnectEntities("shelf_connection","Lever", "LeverDoor", false, 1, "DoorOpen");
   CreateParticleSystemAtEntity("VannVegg", "ps_childsnake_water_stream.ps", "VannFraVeggen", true);
   SetEntityPlayerInteractCallback("Crowbar", "InteractCrowbar", true);
+  SetEntityPlayerInteractCallback("LeverDoor", "InteractLeverDoor", true);
+  SetEntityPlayerInteractCallback("FrontDoor", "InteractFrontDoor", true);
   AddEntityCollideCallback("Player", "FallBox", "Boksefjes", true, 1);
   AddEntityCollideCallback("Player", "NoDust", "DustRemove", true, 1);
   AddEntityCollideCallback("Player", "Skummelt", "FadeOut", true, 1);
   AddEntityCollideCallback("Player", "lurkerspawn", "Plask", true, 1);
   AddEntityCollideCallback("Player", "PushDoor", "Knirk", true, 1);
   AddUseItemCallback("", "crowbar_1", "castle_5", "UsedCrowbarOnDoor", true);
-AddEntityCollideCallback("crowbar_joint_1", "ScriptArea_1", "CollideAreaBreakDoor", true, 1);
+  AddEntityCollideCallback("crowbar_joint_1", "ScriptArea_1", "CollideAreaBreakDoor", true, 1);
+}
+void DoorOpen(string &in asConnectionName, string &in asMainEntity, string &in asConnectEntity, int alState)
+{
+  SetSwingDoorLocked("LeverDoor", false, true);
+	PlaySoundAtEntity("", "unlock_door.snt", "Lever", 0, false);
+	GiveSanityBoostSmall();
+  SetEntityActive("Lever", false);
+  SetEntityActive("Lever_1", true);
+
 }
 void Boksefjes(string &in asParent, string &in asChild, int alState)
 {
@@ -36,7 +48,6 @@ void Plask(string &in asParent, string &in asChild, int alState)
   StartPlayerLookAt("Smash", 1, 10, "");
   AddTimer("", 4.0, "Vannplask");
 }
-
 void Vannplask(string &in asTimer)
 {
   StopPlayerLookAt();
@@ -48,6 +59,20 @@ void Vannplask(string &in asTimer)
 void FadeOut(string &in asParent, string &in asChild, int alState)
 {
   FadeOut(0.3);
+
+  SetEntityActive("Slime", true);
+  SetEntityActive("Slime2", true);
+  SetEntityActive("Slime3", true);
+  SetEntityActive("Slime4", true);
+  SetEntityActive("Slime5", true);
+  SetEntityActive("Slime6", true);
+  SetEntityActive("Slime7", true);
+  SetEntityActive("Meat", true);
+  SetEntityActive("Meat1", true);
+  SetEntityActive("Meat2", true);
+  SetEntityActive("Meat3", true);
+  SetEntityActive("Meat4", true);
+
 
 	AddTimer("scare", 0.3f, "TimerPlayerReact");
 	AddTimer("breath", 2.0f, "TimerPlayerReact");
@@ -97,13 +122,21 @@ void InteractCrowbar(string &in asEntity)
 	SetEntityActive("skummelt", true);
   SetEntityActive("lurkerspawn", true);
 }
+void InteractLeverDoor(string &in asEntity)
+{
+	SetMessage("Sign", "Sign28", 0);;
+}
+void InteractFrontDoor(string &in asEntity)
+{
+	SetMessage("Sign", "Sign26", 0);;
+}
 
 void Snu(string &in asTimer)
 {
 	AddPropForce("box", 2000, 0, 0, "world");
-  AddPropForce("box_1", 2000, 0, 0, "world");
-  AddPropForce("box_2", 2000, 0, 0, "world");
-  AddPropForce("box_3", -2000, 0, 0, "world");
+  AddPropForce("box_1", 1500, 0, 0, "world");
+  AddPropForce("box_2", 1800, 0, 0, "world");
+  AddPropForce("box_3", -1700, 0, 0, "world");
   AddPropForce("box_4", -2000, 0, 0, "world");
   PlaySoundAtEntity("scare", "react_scare.snt", "Player", 0.6f, false);
 }
@@ -122,12 +155,12 @@ void TimerSwitchShovel(string &in asTimer)
 
  void Knirk(string &in asParent, string &in asChild, int alState)
  {
- 	SetSwingDoorClosed("door_gallery", false, false);
- 	SetSwingDoorDisableAutoClose("door_gallery", true);
+ 	SetSwingDoorClosed("FrontDoor", false, false);
+ 	SetSwingDoorDisableAutoClose("FrontDoor", true);
 
- 	PlaySoundAtEntity("creaking_door", "joint_door_move_special.snt", "door_gallery", 1.0 / 0.7f, false);
+ 	PlaySoundAtEntity("creaking_door", "joint_door_move_special.snt", "FrontDoor", 1.0 / 0.7f, false);
 
- 	AddTimer("door_gallery", 0.01f, "TimerSwingDoor");
+ 	AddTimer("FrontDoor", 0.01f, "TimerSwingDoor");
 
  	AddDebugMessage("Boho, the gallery door creaks open.", false);
 
@@ -140,7 +173,7 @@ void TimerSwitchShovel(string &in asTimer)
  		return;
  	}
 
- 	if(asTimer == "door_gallery") AddPropForce(asTimer, -70.0f, 0, 0, "World");
+ 	if(asTimer == "FrontDoor") AddPropForce(asTimer, -70.0f, 0, 0, "World");
  	else AddPropForce(asTimer, -95.0f, 0, 0, "World");
 
  	AddLocalVarInt("SwingDoor", 1);

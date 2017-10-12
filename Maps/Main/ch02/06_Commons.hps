@@ -17,7 +17,7 @@ void MusicStart(string &in asTimer)
 }
 void Stille(string &in asEntity)
 {
-  StopMusic(3, 0);
+  StopMusic(3, 1);
 }
 
 
