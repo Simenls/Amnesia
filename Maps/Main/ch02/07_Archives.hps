@@ -38,22 +38,22 @@ void Boo(string &in asParent, string &in asChild, int alState)
 	StartPlayerLookAt("Dust_1", 5, 10, "");
   CreateParticleSystemAtEntity("FallingDust", "ps_dust_falling_door.ps", "Dust", true);
   StartScreenShake(0.03f, 1.0f, 4.0f,8.0f);
-  AddTimer("", 1.5, "Snu");
+  AddTimer("", 1, "Snu");
 }
 void Snu(string &in asTimer)
 {
-	StartPlayerLookAt("Dust_2", 5, 10, "");
-  AddTimer("", 1.5, "SnuTo");
+	StartPlayerLookAt("Dust_2", 2, 10, "");
+  AddTimer("", 1, "SnuTo");
 }
 void SnuTo(string &in asTimer)
 {
-	StartPlayerLookAt("Dust_3", 5, 10, "");
-  AddTimer("", 1.5, "SnuTre");
+	StartPlayerLookAt("Dust_3", 2, 10, "");
+  AddTimer("", 1, "SnuTre");
 }
 void SnuTre(string &in asTimer)
 {
-	StartPlayerLookAt("Dust", 5, 10, "");
-  AddTimer("", 1.5, "SnuFire");
+	StartPlayerLookAt("Dust", 2, 10, "");
+  AddTimer("", 1, "SnuFire");
 }
 void SnuFire(string &in asTimer)
 {

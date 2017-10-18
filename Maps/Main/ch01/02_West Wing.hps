@@ -1,0 +1,265 @@
+//This is only executed when the map is loaded for the first time. Only happens once. Can be used for adding effects that should not repeat.//
+void OnStart()
+{
+	SetLocalVarInt("ShelfDone", 0);
+	ConnectEntities("shelf_connection","Lever", "Shelf", false, 1, "ShelfGlide");
+	AddEntityCollideCallback("Player", "PushDoor", "Knirk", true, 1);
+	SetEntityPlayerInteractCallback("Shelf", "InteractMoveShelf", true);
+	SetEntityPlayerInteractCallback("castle_1", "InteractCellarDoor", true);
+	SetEntityPlayerInteractCallback("castle_6", "InteractHallwayDoor", true);
+	SetEntityPlayerInteractCallback("Shelf", "HiddenRoom", true);
+	AddUseItemCallback("", "RustyKey", "castle_1", "KeyOnCellarDoor", true);
+	AddEntityCollideCallback("Player", "Slam", "DoorSlam", true, 1);
+	AddEntityCollideCallback("Player", "Vision", "Dissy", true, 1);
+	AddEntityCollideCallback("Player", "Knus", "Knas", true, 1);
+	AddEntityCollideCallback("Player", "Caretaker", "LookatNote", true, 1);
+	AddEntityCollideCallback("Player", "Lykt", "Oil", true, 1);
+	AddEntityCollideCallback("Litenspak", "spakconnect", "connect", true, 1);
+	AddEntityCollideCallback("Player", "LightFade", "PointLight", true, 1);
+	AddEntityCollideCallback("Player", "ThunderActivate", "Thunder", true, 1);
+}
+//Note Music on Pickup.
+void PickNoteToSelf(string &in entity, string &in type)
+{
+	PlayMusic("03_paper_daniel01.ogg", false, 0.7f, 0, 10, false);
+}
+void PickNoteToSelf2(string &in entity, string &in type)
+{
+	PlayMusic("03_paper_daniel02.ogg", false, 0.7f, 0, 10, false);
+	SetLightVisible("NoteLight", false);
+	SetLightVisible("NoteLight2", false);
+}
+void PickNoteToSelf3(string &in entity, string &in type)
+{
+	PlayMusic("01_paper_self.ogg", false, 0.7f, 0, 10, false);
+}
+//Player gets notified one of the hallway doors is locked.
+void InteractHallwayDoor(string &in asEntity)
+{
+	SetMessage("Sign", "Sign26", 2.5);
+}
+//Moving the shelf, as a result of pulling the lever.
+void ShelfGlide(string &in asConnectionName, string &in asMainEntity, string &in asConnectEntity, int alState)
+{
+	SetLocalVarInt("ShelfDone", 1);
+	SetMoveObjectState("Shelf", 1);
+	PlayMusic("01_puzzle_passage.ogg", false, 1.2, 0, 10, false);
+	GiveSanityBoostSmall();
+	FadeLightTo("PointLight_12", 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 3.0f);
+	CompleteQuest("Shelf", "memento3");
+	SetEntityActive("Lever", false);
+  SetEntityActive("Lever_1", true);
+}
+//Connection of the lever and lever mount.
+void connect(string &in asParent, string &in asChild, int alState)
+{
+	SetEntityActive("Lever", true);
+	PlaySoundAtEntity("", "player_ladder_metal_up.snt", "Player", 0, false);
+	SetEntityActive("spakmount", false);
+	SetEntityActive("Litenspak", false);
+}
+//Setting Players oil amount to low.
+void Oil(string &in asParent, string &in asChild, int alState)
+{
+	SetPlayerLampOil(25);
+}
+//Slamming door behind player as they leave the living room, and stops the lookatcallback after.
+void DoorSlam(string &in asParent, string &in asChild, int alState)
+{
+	SetSwingDoorClosed("Door_2", true, true);
+	PlaySoundAtEntity("", "react_breath_slow.snt", "Player", 0, false);
+	PlaySoundAtEntity("", "react_scare", "Player", 0, false);
+	PlaySoundAtEntity("", "close_door.snt", "Player", 0, false);
+	GiveSanityDamage(5.0f, true);
+	StartPlayerLookAt("Eyes", 5, 10, "");
+	AddTimer("", 0.5, "Stopp");
+}
+void Stopp(string &in asTimer)
+{
+	StopPlayerLookAt();
+}
+//The player gets stressed and dissy as they hear noises and are forced to walk slowly, the player pants and breathes heavily.
+void Dissy(string &in asParent, string &in asChild, int alState)
+{
+	FadeImageTrailTo(1.5f,1.25f);
+	SetPlayerMoveSpeedMul(0.5);
+	SetPlayerRunSpeedMul(0.2);
+	SetPlayerLookSpeedMul(0.5);
+	PlaySoundAtEntity("", "scare_male_terrified.snt", "VisionScream", 0, false);
+	PlaySoundAtEntity("", "hurt_pant.snt", "Player", 0, false);
+	AddTimer("", 1.5, "Pant");
+	AddTimer("", 15, "NormalSight");
+	CreateParticleSystemAtEntity("FallingDust", "ps_dust_falling_door.ps", "LampDustArea", true);
+	AddTimer("", 8, "StopDust");
+	AddTimer("", 2, "StartShake");
+}
+void StartShake(string &in asTimer)
+{
+	AddPropForce("Swinglamp", -0, 300, -350, "world");
+}
+void StopDust(string &in asTimer)
+{
+	DestroyParticleSystem("FallingDust");
+}
+void Pant(string &in asTimer)
+{
+	PlaySoundAtEntity("", "hurt_pant.snt", "Player", 0, false);
+	PlaySoundAtEntity("", "scare_male_terrified.snt", "VisionScream", 0, false);
+	AddTimer("", 1.5, "Pant2");
+}
+void Pant2(string &in asTimer)
+{
+	PlaySoundAtEntity("", "hurt_pant.snt", "Player", 0, false);
+	PlaySoundAtEntity("", "scare_male_terrified.snt", "VisionScream", 0, false);
+	AddTimer("", 1.5, "Pant3");
+}
+void Pant3(string &in asTimer)
+{
+	PlaySoundAtEntity("", "hurt_pant.snt", "Player", 0, false);
+	AddTimer("", 1.5, "Pant4");
+}
+void Pant4(string &in asTimer)
+{
+	PlaySoundAtEntity("", "hurt_pant.snt", "Player", 0, false);
+	PlaySoundAtEntity("", "scare_male_terrified.snt", "VisionScream", 0, false);
+	AddTimer("", 1.5, "Pant5");
+}
+void Pant5(string &in asTimer)
+{
+	PlaySoundAtEntity("", "hurt_pant.snt", "Player", 0, false);
+	RemoveTimer("Pant5");
+}
+void NormalSight(string &in asTimer)
+{
+	FadeImageTrailTo(0.0f,1.25f);
+	SetPlayerMoveSpeedMul(1);
+	SetPlayerRunSpeedMul(1);
+	SetPlayerLookSpeedMul(1);
+}
+//The player gets notified it needs a key to unlock the door leading to the cellar.
+void InteractCellarDoor(string &in asEntity)
+{
+	SetMessage("Sign", "Sign6", 0);
+	AddQuest("castle_1", "memento4");
+}
+//The player gets a quest regarding the acid in the cellar.
+void InteractClueNote(string &in asEntity)
+{
+	AddQuest("note_scroll_1", "memento8");
+}
+//Using the key found in the secret room behind the shelf, unlocks the door to the cellar door.
+void KeyOnCellarDoor(string &in asItem, string &in asEntity)
+{
+	SetSwingDoorLocked("castle_1", false, true);
+	PlaySoundAtEntity("", "unlock_door.snt", "castle_1", 0, false);
+	RemoveItem("RustyKey");
+	CompleteQuest("castle_1", "memento4");
+}
+//Notifies the player about a hidden room behind the shelf, and adds a quest.
+void HiddenRoom(string &in asEntity)
+{
+	if(GetLocalVarInt("ShelfDone") == 1){
+		return;
+	}
+	AddQuest("Shelf", "memento3");
+	SetMessage("Sign", "Sign4", 0);
+}
+//As player proceeds down the hallway, a door glides open, papers and dust bursting out in a gust of wind. The torches are blown out.
+void Knirk(string &in asParent, string &in asChild, int alState)
+{
+	SetSwingDoorClosed("Door", false, false);
+	SetSwingDoorDisableAutoClose("Door", true);
+
+	PlaySoundAtEntity("creak", "joint_door_move_special.snt", "Door", 0.7, false);
+	PlaySoundAtEntity("Wind", "general_wind_whirl", "Player", 2, false);
+	PlaySoundAtEntity("bong", "scare_tingeling.snt", "Torch_2", 0.0f, false);
+	FadePlayerFOVMulTo(1.5, 0.5f);
+
+
+	AddTimer("", 2, "TimerStopSound");
+	AddTimer("", 0.5, "DoorBlow");
+	AddTimer("", 1.0, "DoorPaper");
+	AddTimer("", 2, "LampOut");
+	AddTimer("Door", 0, "TimerMoveDoor");
+}
+void LampOut(string &in asTimer)
+{
+	SetLampLit("Torch", false, true);
+	SetLampLit("Torch_1", false, true);
+	SetLampLit("Torch_2", false, true);
+}
+void DoorBlow(string &in asTimer)
+{
+	CreateParticleSystemAtEntity("PSDoor_2", "ps_dust_push.ps", "Blow", false);
+	PlaySoundAtEntity("scare", "react_scare.snt", "Player", 0.75f, false);
+	FadePlayerFOVMulTo(1, 0.5f);
+}
+void DoorPaper(string &in asTimer)
+{
+	CreateParticleSystemAtEntity("PSDoor_1", "ps_dust_paper_blow.ps", "Paper", false);
+}
+void TimerMoveDoor(string &in asTimer)
+{
+	if(GetLocalVarInt("VarDoor") == 10) return;
+	AddLocalVarInt("VarDoor", 1);
+
+	AddTimer(asTimer, 0.03, "TimerMoveDoor");
+
+	AddPropForce(asTimer, 0, 0, -70, "world");
+}
+
+void TimerStopSound(string &in asTimer)
+{
+	StopSound("creak", 0.4);
+}
+//Thunder as player enters room with first note, continues throughout the map.
+/*void Thunder(string &in asParent, string &in asChild, int alState)
+{
+	SetLocalVarInt("tordenloop", 0);
+	if(GetLocalVarInt("tordenloop") ==0){
+		AddTimer("torden", GetLocalVarInt("tordenloop"), "ThunderStart");
+	}
+}
+void ThunderStart(string &in asTimer)
+{
+	PlaySoundAtEntity("scare", "general_thunder.snt", "ThunderArea", 0, false);
+	SetLocalVarInt("tordenloop", (GetLocalVarInt("tordenloop") +12));
+		AddTimer("torden", GetLocalVarInt("tordenloop"), "ThunderStart");
+}*/
+
+
+//Trying to make thunder work as planned, stuck atm lel.
+/*int tordenloop=0;
+void Thunder(string &in asParent, string &in asChild, int alState)
+{
+  AddTimer("", 0.2, "PoundStart");
+}
+void PoundStart(string &in asTimer)
+{
+    PlaySoundAtEntity("scare", "general_thunder.snt", "ThunderArea", 0, false);
+    if(GetLocalVarInt("tordenloop") <1200){
+      SetLocalVarInt("tordenloop", (GetLocalVarInt("tordenloop")+1));
+      if(((GetLocalVarInt("tordenloop")%12)==0)){
+        AddTimer("", 1.5, "PoundStart");
+      }
+    }
+}*/
+//This is executed every time you enter the level. Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+  AddTimer("Musikk", 1.0f, "MusicStart");
+}
+void MusicStart(string &in asTimer)
+{
+	PlayMusic("04_amb.ogg", true, 1, 3, 1, true);
+}
+void Stille(string &in asEntity)
+{
+  StopMusic(3, 0);
+	StopSound("general_thunder.snt", 0);
+}
+//This is executed every time you leave the level. Can be executed several times. Can be used for stopping music//
+void OnLeave()
+{
+
+}

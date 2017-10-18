@@ -15,9 +15,14 @@ void OnStart()
   AddUseItemCallback("", "crowbar_1", "castle_5", "UsedCrowbarOnDoor", true);
   AddEntityCollideCallback("crowbar_joint_1", "ScriptArea_1", "CollideAreaBreakDoor", true, 1);
 }
+//Note Music on Pickup.
+void PickNoteToSelf(string &in entity, string &in type)
+{
+	PlayMusic("05_paper_transformation.ogg", false, 0.7f, 0, 10, false);
+}
 void DoorOpen(string &in asConnectionName, string &in asMainEntity, string &in asConnectEntity, int alState)
 {
-  SetSwingDoorLocked("LeverDoor", false, true);
+  SetLevelDoorLocked("LeverDoor", false);
 	PlaySoundAtEntity("", "unlock_door.snt", "Lever", 0, false);
 	GiveSanityBoostSmall();
   SetEntityActive("Lever", false);
@@ -124,11 +129,12 @@ void InteractCrowbar(string &in asEntity)
 }
 void InteractLeverDoor(string &in asEntity)
 {
-	SetMessage("Sign", "Sign28", 0);;
+	SetMessage("Sign", "Sign28", 0);
+  PlaySoundAtEntity("DoorLock","door_level_metal_locked","Player", 0, false);
 }
 void InteractFrontDoor(string &in asEntity)
 {
-	SetMessage("Sign", "Sign26", 0);;
+	SetMessage("Sign", "Sign26", 0);
 }
 
 void Snu(string &in asTimer)

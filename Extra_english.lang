@@ -1,6 +1,6 @@
 <LANGUAGE>
 	<CATEGORY Name="CustomStoryMain">
-		<Entry Name="Description">Gretu story, i prømis</Entry>
+		<Entry Name="Description">Gretu story, i prømis. Lawrence Wilder is bed guy</Entry>
 	</CATEGORY>
 
 	<CATEGORY Name="Journal">
@@ -11,12 +11,20 @@
 
 		<Entry Name="Note_Warrant_Name">Warrant</Entry>
 		<Entry Name="Note_Warrant_Text">Warrant from the "" police department regarding the castle of "". After the mysterious dissaperings in "" the local investigators has signed a warrant to search ""</Entry>
-		<Entry Name="Note_Restoration_Name">"Restoration" (1/2)</Entry>
-		<Entry Name="Note_Restoration_Text">4th of March 1755[br][br]Much of the castle is weakening by the minute. The servants have been working on the restoration of the west wing of the castle for months. Much has been fixed, but some things still tending to. The guest rooms has had a cave-in and will not be possible to inhabit for the coming weeks.[br][br]The lever ment to be in the old study fell off and broke the other day, so a new one has been crafted and is now ready for use.</Entry>
-		<Entry Name="Note_RestorationSecond_Name">"Restoration" (2/2)</Entry>
+		<Entry Name="Note_Restoration_Name">Lord Wilder's Journal - "Restoration" (1/2)</Entry>
+		<Entry Name="Note_Restoration_Text">4th of March 1755[br][br]Much of the castle is weakening by the minute. The servants have been working on the restoration of the west wing for months. Much has been fixed, but some things still needs tending to. The guest quarters has had a cave-in and will not be possible to inhabit for god knows how long.[br][br]Jonathan notified me that the lever ment to be in the old study fell off and broke the other day, so he crafted a new one, he said he left it at my desk and it's now ready for use.</Entry>
+		<Entry Name="Note_RestorationSecond_Name">Lord Wilder's Journal - "Restoration" (2/2)</Entry>
 		<Entry Name="Note_RestorationSecond_Text">12th of March 1755[br][br]While the restoration of most of the west wing has gone as planned, the cellar and the passage to the storage has proved to be a more daunting and challenging task. It's like the castle has a life of it's own, the darkness arrived little by little, consuming anything in it's path.[br][br]The alchemists was set to work on a soultion for all the tissue left by the darkness, they managed to brew up a concoction strong enough to rip right through the human skin. If handeled with care, this might be the first step to removing the darkness' residue.</Entry>
-		<Entry Name="Note_Barnes_Name">"Investigative notes" - John Barnes (1/3)</Entry>
-		<Entry Name="Note_Barnes_Text">17th of August 1755[br][br]I arrived by horse at the town of Walford late in the evening. My supperior, the sherriff - Neal Woods, told me he had great news for me. The town of Walford had over a period of time had regular dissaperances, and I was to be appointed head investigator of the case. At first I was not sure quite what to make of the so-called "good news", but then I realised how great of an opportunity it would be for me if I could solve it.[br][br]One could almost say I was glad at the time for being assigned such a difficult and notorious case. Now however I do not know what I feel, I've traveled far from home, far from familiar territory. In the morning I will meet with Thomas Middleton, the local investigator, he is to assist me during the investigation. Little do I know about the town of Walford, my investigations will start tomorrow. </Entry>
+		<Entry Name="Note_Barnes_Name">John Barnes' Journal - "Investigative notes" (1/3)</Entry>
+		<Entry Name="Note_Barnes_Text">17th of August 1755[br][br]I arrived by horse at the town of Walford late in the evening. My supperior, the sherriff - Neal Woods, told me he had great news for me. The town of Walford had over a period of time had regular dissaperances, and I was to be appointed head investigator of the case. At first I was not sure quite what to make of the so-called "good news", but then I realised how great of an opportunity it would be for me if I could solve
+		it.[br][br]One could almost say I was glad at the time for being assigned such a difficult and notorious case. Now however I do not know what I feel, I've traveled far from home, far from familiar territory. In the morning I will meet with Thomas Middleton, the local investigator, he is to assist me during the investigation. Little do I know about the town of Walford, my investigations will start tomorrow. </Entry>
+		<Entry Name="Note_CityFire_Name">Local Lore - The Great Fire of 1745</Entry>
+		<Entry Name="Note_CityFire_Text">After centuries upon centuries, the feudal town of Walford finally started to mark its place on the map of England. Originally starting out as a little village by merchants, for merchants, Walford had by 1740 grown into a town with a massive influence on the international sea trade. Due to its geographical location along the coastline, Walford was granted easy access to both fish, but also sea territory. All was going well for Walford, with the addition of the blacksmith and the health service in 1742 and 1744, respectively, the population of Walford flourished. Looking to expand, local farms was absorbed in under the town itself, Walford grew steadily by the day. All was good.[br][br]It’s hard to say if anyone saw it coming or not, but little is known of the origin of the black flame. Come midnight, August 10th 1745, the sparks spread, the wooden houses stood no chance. One by one, the city was devoured by flames, one family after the other perished in their sleep. Some managed to wake up from the sound of collapsing and burning buildings, others were not as fortunate. The entire town was left in ruins, nothing to see but the blackness of the smoke. For the ones who got away, the struggle of survivors guilt came quick, some blamed themselves, while others pointed fingers. No one could for certain say why the fire broke out, but one could certainly say that the town was at this point nothing but ashes. A pile of coal and ashes, with a majestic, gothic castle – Walford Castle, still standing strong as the monolith it was.</Entry>
+		<Entry Name="Note_ChemicalsMoved_Name">"Security measures regarding the Laboratory"</Entry>
+		<Entry Name="Note_ChemicalsMoved_Text">Due to an unexpected break-in some weeks ago, new and improved steps has been taken regarding the accessibility of the Laboratory. It didn't seem like anything was taken, but someone was surely looking for something they deemed as important. The mess was taken care of</Entry>
+		<Entry Name="Note_AnimalExperiment_Name">Animal Experiments - "Canis Lupus Familiaris"</Entry>
+		<Entry Name="Note_AnimalExperiment_Text">April 12th 1754[br][br]After a short study it is clear that the agitation found among humans can be found in the dog. Fear and pain induce stress which seems to trigger an endogenous response, causing the animal to burst with energy. I believe that the catalyst is produced in the brain. It is difficult to determine exactly where and what it is, but I can sense it, it reeks of cosmic genesis.[br][br]There is an inherent problem in harvesting this energy since the creature is bound to die from the exercise. I must refine this process of torture to enable any real work to be done. More experiments must be performed, but it seems that only human beings are able to produce the amount necessary. It might be their ability to appreciate the severity of the process that ultimately augments their experience of terror.</Entry>
+
 /////////////////////////////////////////////////////////////////////////////////
 //-----------------------------------Diaries-----------------------------------//
 /////////////////////////////////////////////////////////////////////////////////
@@ -45,12 +53,10 @@
 		<Entry Name="ItemDesc_key3">The key to the Cellar.</Entry>
 		<Entry Name="ItemName_key4">Commons Key</Entry>
 		<Entry Name="ItemDesc_key4">The key to the Commons.</Entry>
-		<Entry Name="ItemName_Crowbar">Crowbar</Entry>
-		<Entry Name="ItemDesc_Crowbar">Great for opening jammed doors.</Entry>
-		<Entry Name="ItemName_Hammer">Hammer</Entry>
-		<Entry Name="ItemDesc_Hammer">A little loose, yet a sturdy hammer.</Entry>
 		<Entry Name="ItemName_Acid">Acid Container</Entry>
-		<Entry Name="ItemDesc_Acid">Will dissolve tough tissue.</Entry>
+		<Entry Name="ItemDesc_Acid">An empty container.</Entry>
+		<Entry Name="ItemName_Acid2">Pot of Acid</Entry>
+		<Entry Name="ItemDesc_Acid2">Will dissolve though tissue.</Entry>
 		<Entry Name="ItemName_Stige">Ladder Part</Entry>
 		<Entry Name="ItemDesc_Stige">A part of a ladder.</Entry>
 	</CATEGORY>
@@ -88,6 +94,10 @@
 		<Entry Name="Sign27">There is no way I'm getting back that way.</Entry>
 		<Entry Name="Sign28">The door seems to be locked with some sort of mechanism.</Entry>
 		<Entry Name="Sign29">"Laboratory"</Entry>
+		<Entry Name="SignDogSpine">"The Canine Spine"</Entry>
+		<Entry Name="SignDogMouth">"The Canine Jaw"</Entry>
+		<Entry Name="SignNewHuman">"Milestones of Human Anatomy"</Entry>
+		<Entry Name="SignNewDog">"Milestones of Canine Anatomy"</Entry>
 
 
 	</CATEGORY>
@@ -110,6 +120,7 @@
 		<Entry Name="Storage B">Storage B</Entry>
 		<Entry Name="Commons">Commons</Entry>
 		<Entry Name="East Wing">East Wing</Entry>
+		<Entry Name="Laboratory">Laboratory</Entry>
 	</CATEGORY>
 
 /////////////////////////////////////////////////////////////////////////////////

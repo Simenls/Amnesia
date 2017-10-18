@@ -1,0 +1,248 @@
+//This is only executed when the map is loaded for the first time.
+//Only happens once. Can be used for adding effects and callbacks that should not repeat.//
+void OnStart()
+{
+	AddUseItemCallback("", "chemical_container_1", "Web", "RemoveSlime", true);
+	AddEntityCollideCallback("Player", "Slime_Area", "Give_SlimeQuest", true, 1);
+	AddEntityCollideCallback("Player", "Cavein_Area", "CaveIn", true, 1);
+	AddEntityCollideCallback("Player", "PointOfNoReturn", "Nope", true, 1);
+	AddEntityCollideCallback("Player", "monster", "tiss", true, 1);
+	AddUseItemCallback("", "LevelKey", "LevelCellar", "KeyOnLevelDoor", true);
+	SetEntityPlayerInteractCallback("InteractAfterCaveIn", "AfterCaveIn", true);
+}
+void tiss(string &in asParent, string &in asChild, int alState)
+{
+	SetEntityActive("servant_grunt_1", true);
+	StartPlayerLookAt("castle_4", 2, 10,"");
+	AddTimer("", 1.5, "ikkese");
+	AddTimer("", 2, "stengt");
+	AddTimer("", 4, "semindre");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_1", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_2", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_3", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_4", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_5", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_6", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_7", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_8", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_9", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_10", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_11", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_12", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_13", 0, "");
+	AddEnemyPatrolNode("servant_grunt_1", "PathNodeArea_14", 0, "");
+}
+
+void ikkese(string &in asTimer)
+{
+	StopPlayerLookAt();
+}
+
+void stengt(string &in asTimer)
+{
+	SetSwingDoorClosed("castle_5", true, true);
+	PlaySoundAtEntity("", "react_breath_slow.snt", "Player", 0, false);
+	PlaySoundAtEntity("", "close_door.snt", "Player", 0, false);
+	GiveSanityDamage(5.0f, true);
+	StartPlayerLookAt("ScriptArea_1", 5, 10, "");;
+	CreateParticleSystemAtEntity("CaveIn", "ps_dust_impact.ps", "ScriptArea_1", false);
+}
+
+void semindre(string &in asTimer)
+{
+	StopPlayerLookAt();
+}
+void RemoveSlime(string &in asItem, string &in asEntity)
+{
+	SetPropHealth(asEntity, 0);
+	RemoveItem("chemical_container_1");
+	GiveSanityBoostSmall();
+	PlayMusic("15_puzzle_hole.ogg", false, 1.0f, 0.5f, 5, false);
+	CompleteQuest("slime", "memento5");
+}
+void KeyOnLevelDoor(string &in asItem, string &in asEntity)
+{
+	SetLevelDoorLocked("LevelCellar", false);
+	PlaySoundAtEntity("", "unlock_door.snt", "LevelCellar", 0, false);
+	RemoveItem("LevelKey");
+	GiveSanityBoostSmall();
+}
+
+void Give_SlimeQuest(string &in asParent, string &in asChild, int alState)
+{
+	AddQuest("slime", "memento5");
+}
+void Nope(string &in asParent, string &in asChild, int alState)
+{
+	SetMessage("Sign", "Sign10", 0);
+}
+//A cave-in happens, knocking the player uncounsisiscnes
+void CaveIn(string &in asParent, string &in asChild, int alState)
+{
+	SetLanternDisabled(true);
+	RemoveItem("lantern");
+	StopMusic(1.5, 0);
+	PlayMusic("22_event_trapped.ogg", true, 1, 3, 1, true);
+	AddTimer("CaveInDust", 2, "DustPush");
+	PlaySoundAtEntity("guardboo", "guardian_ontop", "Player", 2.0f, false);
+	StartScreenShake(0.1f, 1.0f, 4.0f,8.0f);
+	StartPlayerLookAt("Stones", 3, 10, "");
+	SetPlayerActive(false);
+	SetSanityDrainDisabled(true);
+	CreateParticleSystemAtEntity("Cavedust", "ps_dust_push.ps", "DustPushArea", false);
+	CreateParticleSystemAtEntity("dust2", "ps_dust_push.ps", "DustPushArea2", false);
+	CreateParticleSystemAtEntity("dust3", "ps_dust_push.ps", "DustPushArea3", false);
+	CreateParticleSystemAtEntity("dust4", "ps_dust_push.ps", "DustPushArea4", false);
+	CreateParticleSystemAtEntity("dust4", "ps_dust_push.ps", "DustPushArea8", false);
+	CreateParticleSystemAtEntity("dust4", "ps_dust_push.ps", "DustPushArea9", false);
+	CreateParticleSystemAtEntity("dust4", "ps_dust_push.ps", "DustPushArea10", false);
+	CreateParticleSystemAtEntity("dust4", "ps_dust_push.ps", "DustPushArea11", false);
+	CreateParticleSystemAtEntity("dust4", "ps_dust_push.ps", "DustPushArea12", false);
+	CreateParticleSystemAtEntity("dust4", "ps_dust_push.ps", "DustPushArea13", false);
+	CreateParticleSystemAtEntity("dust4", "ps_dust_push.ps", "DustPushArea14", false);
+	CreateParticleSystemAtEntity("dust4", "ps_dust_push.ps", "DustPushArea15", false);
+}
+void DustPush(string &in asTimer)
+{
+	SetEntityActive("CaveIn", true);
+	SetEntityActive("stein", true);
+	SetEntityActive("stein1", true);
+	SetEntityActive("stein2", true);
+	SetEntityActive("stein3", true);
+	SetEntityActive("stein4", true);
+	SetEntityActive("stein5", true);
+	SetEntityActive("stein6", true);
+	PlaySoundAtEntity("brak", "explosion_rock_large.snt", "CaveInSound", 4, false);
+	CreateParticleSystemAtEntity("dust5", "ps_dust_push.ps", "DustPushArea5", false);
+	CreateParticleSystemAtEntity("dust6", "ps_dust_push.ps", "DustPushArea6", false);
+	CreateParticleSystemAtEntity("dust7", "ps_dust_push.ps", "DustPushArea7", false);
+	CreateParticleSystemAtEntity("CaveIn", "ps_dust_impact.ps", "CaveIn", false);
+	CreateParticleSystemAtEntity("CaveIn", "ps_dust_impact.ps", "Lantern", false);
+	CreateParticleSystemAtEntity("CaveIn", "ps_dust_impact_vert.ps", "CaveIn", false);
+	CreateParticleSystemAtEntity("CaveIn", "ps_dust_impact_vert.ps", "Lantern", false);
+	AddTimer("", 1, "PlayerHit");
+}
+void PlayerHit(string &in asTimer)
+{
+	PlaySoundAtEntity("player_hit", "player_falldamage_max", "Player", 0, false);
+	GivePlayerDamage(-20, "BloodSplat", false, false);
+	AddTimer("", 0.2, "PlayerHit2");
+	AddTimer("", 1, "PlayerHit3");
+	AddTimer("", 1.2, "PlayerFaint");
+	StopPlayerLookAt();
+}
+void PlayerHit2(string &in asTimer)
+{
+	PlaySoundAtEntity("player_hit", "player_falldamage_max", "Player", 0, false);
+	GivePlayerDamage(-10, "BloodSplat", false, false);
+}
+void PlayerHit3(string &in asTimer)
+{
+	PlaySoundAtEntity("player_hit", "player_falldamage_max", "Player", 0, false);
+	GivePlayerDamage(-5, "BloodSplat", true, false);
+}
+void PlayerFaint(string &in asTimer)
+{
+	MovePlayerHeadPos(0, -1.1f, 0, 8, 0.5f);
+	FadePlayerRollTo(-60, 5, 5);
+	FadeOut(0.1);
+	SetLampLit("Torch", false, true);
+	SetLampLit("Torch2", false, true);
+	SetLampLit("Torch3", false, true);
+	SetLampLit("Torch4", false, true);
+
+
+	AddTimer("", 1.4, "PlayerRing");
+	AddTimer("", 1.2, "PlayerFall");
+}
+void PlayerFall(string &in asTimer)
+{
+	PlaySoundAtEntity("player_fall_to_ground", "player_bodyfall", "FallArea", 0, false);
+}
+void PlayerRing(string &in asTimer)
+{
+	PlaySoundAtEntity("player_ring", "insanity_ear_ring.snt", "Player", 0, false);
+	StartPlayerLookAt("Stones", 3, 10, "");
+	AddTimer("", 10, "FirstEyes");
+}
+void FirstEyes(string &in asTimer)
+{
+	FadeIn(2);
+	StopPlayerLookAt();
+	FadePlayerRollTo(-60, 5, 5);
+	StopSound("player_ring", 10.0f);
+	PlaySoundAtEntity("player_sigh", "react_sigh.snt", "Player", 0, false);
+	AddTimer("", 8, "EyesClose");
+}
+void EyesClose(string &in asTimer)
+{
+	FadeOut(0.2);
+	PlaySoundAtEntity("getup_pant", "react_pant.snt", "Player", 0, false);
+	StartPlayerLookAt("Roof", 0.05, 10, "");
+	AddTimer("", 8, "SecondEyes");
+}
+void SecondEyes(string &in asTimer)
+{
+	FadeIn(2);
+	FadePlayerRollTo(-60, 5, 5);
+	StopSound("player_ring", 1.0f);
+	PlaySoundAtEntity("player_sigh", "react_sigh.snt", "Player", 0, false);
+	AddTimer("", 4, "EyesClose2");
+	AddTimer("", 10, "GetUp");
+}
+void EyesClose2(string &in asTimer)
+{
+	FadeOut(0.2);
+	PlaySoundAtEntity("getup_pant", "react_pant.snt", "Player", 0, false);
+	StartPlayerLookAt("Stones", 0.05, 10, "");
+}
+void GetUp(string &in asTimer)
+{
+	FadeIn(2);
+	SetEntityActive("RollLantern", true);
+	StopMusic(1.5, 0);
+	PlaySoundAtEntity("player_fall_to_ground", "player_bodyfall", "Player", 0, false);
+	MovePlayerHeadPos(0, 0.0f, 0, 6, 0.5f);
+	FadePlayerRollTo(0.0f, 33.0f, 33.0f);
+	SetLanternDisabled(false);
+	AddTimer("", 1.5, "PlayerActive");
+}
+void PlayerActive(string &in asTimer)
+{
+	StopPlayerLookAt();
+	SetPlayerActive(true);
+	SetSanityDrainDisabled(false);
+	PlayMusic("22_amb.ogg", true, 1, 3, 1, true);
+	SetEntityActive("InteractAfterCaveIn", true);
+	StartPlayerLookAt("RollLantern", 1, 10, "");
+}
+void PickLantern(string &in asEntity)
+{
+	StopPlayerLookAt();
+	GiveSanityBoostSmall();
+}
+void AfterCaveIn(string &in asEntity)
+{
+	SetMessage("Sign", "Sign27", 0);
+}
+
+//This is executed every time you enter the level.
+//Can be executed several times. Can be used for playing music and adding checks.//
+void OnEnter()
+{
+  AddTimer("Musikk", 1.0f, "MusicStart");
+}
+void MusicStart(string &in asTimer)
+{
+	PlayMusic("22_amb.ogg", true, 1, 3, 1, true);
+}
+void Stille(string &in asEntity)
+{
+  StopMusic(3, 0);
+}
+//This is executed every time you leave the level.
+//Can be executed several times. Can be used for stopping music or ending effects.//
+void OnLeave()
+{
+
+}
